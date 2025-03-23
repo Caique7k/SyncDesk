@@ -40,72 +40,55 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(81, 12);
+            resources.ApplyResources(pictureBox1, "pictureBox1");
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(155, 138);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(139, 171);
+            resources.ApplyResources(label1, "label1");
+            label1.Cursor = Cursors.IBeam;
             label1.Name = "label1";
-            label1.Size = new Size(39, 14);
-            label1.TabIndex = 1;
-            label1.Text = "Email";
             // 
             // textBoxemail
             // 
-            textBoxemail.Location = new Point(81, 188);
+            textBoxemail.Cursor = Cursors.IBeam;
+            resources.ApplyResources(textBoxemail, "textBoxemail");
             textBoxemail.Name = "textBoxemail";
-            textBoxemail.Size = new Size(155, 21);
-            textBoxemail.TabIndex = 2;
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(139, 233);
+            resources.ApplyResources(label2, "label2");
+            label2.Cursor = Cursors.IBeam;
             label2.Name = "label2";
-            label2.Size = new Size(43, 14);
-            label2.TabIndex = 3;
-            label2.Text = "Senha";
             // 
             // textBoxSenha
             // 
-            textBoxSenha.Location = new Point(81, 250);
+            textBoxSenha.Cursor = Cursors.IBeam;
+            resources.ApplyResources(textBoxSenha, "textBoxSenha");
             textBoxSenha.Name = "textBoxSenha";
-            textBoxSenha.Size = new Size(155, 21);
-            textBoxSenha.TabIndex = 4;
             // 
             // btnLogin
             // 
             btnLogin.Cursor = Cursors.Hand;
-            btnLogin.Location = new Point(111, 303);
+            resources.ApplyResources(btnLogin, "btnLogin");
             btnLogin.Name = "btnLogin";
-            btnLogin.Size = new Size(98, 35);
-            btnLogin.TabIndex = 5;
-            btnLogin.Text = "Login";
             btnLogin.UseVisualStyleBackColor = true;
             btnLogin.Click += btnLogin_Click;
             // 
             // LoginForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 14F);
+            resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(319, 366);
             Controls.Add(btnLogin);
             Controls.Add(textBoxSenha);
             Controls.Add(label2);
             Controls.Add(textBoxemail);
             Controls.Add(label1);
             Controls.Add(pictureBox1);
-            Font = new Font("Arial Rounded MT Bold", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Icon = (Icon)resources.GetObject("$this.Icon");
+            FormBorderStyle = FormBorderStyle.FixedDialog;
+            MaximizeBox = false;
             Name = "LoginForm";
-            Text = "SyncDesk - Login";
             Load += LoginForm_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
