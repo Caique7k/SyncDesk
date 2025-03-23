@@ -1,12 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Npgsql;
+using System;
+using System.Data;
 
-namespace SyncDesk.SyncDesk.Data
+namespace SyncDesk.Data
 {
-    class Database
+    public class Database
     {
+        private static string connectionString = "Host=localhost;Port=5432;Username=admin_user;Password=projetointegrador;Database=syncdesk";
+
+        public static NpgsqlConnection GetConnection()
+        {
+            try
+            {
+                var conn = new NpgsqlConnection(connectionString);
+                conn.Open();
+                return conn;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Erro ao conectar ao banco: {ex.Message}");
+                return null;
+            }
+        }
     }
 }
