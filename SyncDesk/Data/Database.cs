@@ -6,7 +6,7 @@ namespace SyncDesk.Data
 {
     public class Database
     {
-        private static string connectionString = "Host=localhost;Port=5432;Username=admin_user;Password=projetointegrador;Database=syncdesk";
+        private static string connectionString = "Host=localhost;Port=5432;Username=postgres;Password=1234;Database=syncdesk";
 
         public static NpgsqlConnection GetConnection()
         {
