@@ -28,13 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             label1 = new Label();
+            databaseBindingSource = new BindingSource(components);
+            ((System.ComponentModel.ISupportInitialize)databaseBindingSource).BeginInit();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(350, 184);
+            label1.Location = new Point(429, 190);
             label1.Name = "label1";
             label1.Size = new Size(49, 15);
             label1.TabIndex = 0;
@@ -46,7 +49,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(label1);
             Name = "Clientes";
-            Size = new Size(699, 420);
+            Size = new Size(1018, 420);
+            ((System.ComponentModel.ISupportInitialize)databaseBindingSource).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -54,5 +58,7 @@
         #endregion
 
         private Label label1;
+        private DateTimePicker dateTimePicker1;
+        private BindingSource databaseBindingSource;
     }
 }

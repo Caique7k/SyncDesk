@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             label1 = new Label();
             panel1 = new Panel();
+            Utilitários = new Label();
             lblusuarios = new Label();
             pictureUsuario = new PictureBox();
             label4 = new Label();
@@ -51,6 +52,7 @@
             panel2 = new Panel();
             pictureBox2 = new PictureBox();
             panelContent = new Panel();
+            panel3 = new Panel();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureUsuario).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureSaida).BeginInit();
@@ -62,12 +64,13 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            panel3.SuspendLayout();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(6, 27);
+            label1.Location = new Point(6, 0);
             label1.Name = "label1";
             label1.Size = new Size(40, 16);
             label1.TabIndex = 0;
@@ -76,6 +79,7 @@
             // panel1
             // 
             panel1.BackColor = Color.MediumPurple;
+            panel1.Controls.Add(Utilitários);
             panel1.Controls.Add(lblusuarios);
             panel1.Controls.Add(pictureUsuario);
             panel1.Controls.Add(label4);
@@ -96,15 +100,26 @@
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(173, 809);
+            panel1.Size = new Size(173, 675);
             panel1.TabIndex = 1;
+            // 
+            // Utilitários
+            // 
+            Utilitários.AutoSize = true;
+            Utilitários.Font = new Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Utilitários.ForeColor = Color.Transparent;
+            Utilitários.Location = new Point(45, 163);
+            Utilitários.Name = "Utilitários";
+            Utilitários.Size = new Size(79, 19);
+            Utilitários.TabIndex = 0;
+            Utilitários.Text = "Utilitários";
             // 
             // lblusuarios
             // 
             lblusuarios.AutoSize = true;
             lblusuarios.Cursor = Cursors.Hand;
             lblusuarios.ForeColor = Color.Transparent;
-            lblusuarios.Location = new Point(45, 603);
+            lblusuarios.Location = new Point(55, 565);
             lblusuarios.Name = "lblusuarios";
             lblusuarios.Size = new Size(60, 16);
             lblusuarios.TabIndex = 12;
@@ -115,7 +130,7 @@
             // 
             pictureUsuario.Cursor = Cursors.Hand;
             pictureUsuario.Image = (Image)resources.GetObject("pictureUsuario.Image");
-            pictureUsuario.Location = new Point(12, 597);
+            pictureUsuario.Location = new Point(12, 557);
             pictureUsuario.Name = "pictureUsuario";
             pictureUsuario.Size = new Size(37, 29);
             pictureUsuario.SizeMode = PictureBoxSizeMode.Zoom;
@@ -128,7 +143,7 @@
             label4.AutoSize = true;
             label4.Font = new Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label4.ForeColor = Color.Transparent;
-            label4.Location = new Point(45, 562);
+            label4.Location = new Point(45, 512);
             label4.Name = "label4";
             label4.Size = new Size(73, 19);
             label4.TabIndex = 10;
@@ -139,7 +154,7 @@
             lblsaida.AutoSize = true;
             lblsaida.Cursor = Cursors.Hand;
             lblsaida.ForeColor = Color.Transparent;
-            lblsaida.Location = new Point(45, 497);
+            lblsaida.Location = new Point(55, 456);
             lblsaida.Name = "lblsaida";
             lblsaida.Size = new Size(39, 16);
             lblsaida.TabIndex = 9;
@@ -150,7 +165,7 @@
             // 
             pictureSaida.Cursor = Cursors.Hand;
             pictureSaida.Image = (Image)resources.GetObject("pictureSaida.Image");
-            pictureSaida.Location = new Point(12, 487);
+            pictureSaida.Location = new Point(12, 447);
             pictureSaida.Name = "pictureSaida";
             pictureSaida.Size = new Size(37, 37);
             pictureSaida.SizeMode = PictureBoxSizeMode.Zoom;
@@ -163,7 +178,7 @@
             lblentrada.AutoSize = true;
             lblentrada.Cursor = Cursors.Hand;
             lblentrada.ForeColor = Color.Transparent;
-            lblentrada.Location = new Point(45, 444);
+            lblentrada.Location = new Point(55, 416);
             lblentrada.Name = "lblentrada";
             lblentrada.Size = new Size(60, 16);
             lblentrada.TabIndex = 8;
@@ -174,7 +189,7 @@
             // 
             pictureEntrada.Cursor = Cursors.Hand;
             pictureEntrada.Image = (Image)resources.GetObject("pictureEntrada.Image");
-            pictureEntrada.Location = new Point(12, 435);
+            pictureEntrada.Location = new Point(12, 406);
             pictureEntrada.Name = "pictureEntrada";
             pictureEntrada.Size = new Size(37, 35);
             pictureEntrada.SizeMode = PictureBoxSizeMode.Zoom;
@@ -187,7 +202,7 @@
             label3.AutoSize = true;
             label3.Font = new Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.Transparent;
-            label3.Location = new Point(42, 397);
+            label3.Location = new Point(45, 354);
             label3.Name = "label3";
             label3.Size = new Size(86, 19);
             label3.TabIndex = 7;
@@ -198,7 +213,7 @@
             lblhorarios.AutoSize = true;
             lblhorarios.Cursor = Cursors.Hand;
             lblhorarios.ForeColor = Color.Transparent;
-            lblhorarios.Location = new Point(45, 322);
+            lblhorarios.Location = new Point(55, 300);
             lblhorarios.Name = "lblhorarios";
             lblhorarios.Size = new Size(59, 16);
             lblhorarios.TabIndex = 0;
@@ -209,7 +224,7 @@
             // 
             pictureHorarios.Cursor = Cursors.Hand;
             pictureHorarios.Image = (Image)resources.GetObject("pictureHorarios.Image");
-            pictureHorarios.Location = new Point(12, 313);
+            pictureHorarios.Location = new Point(12, 291);
             pictureHorarios.Name = "pictureHorarios";
             pictureHorarios.Size = new Size(37, 34);
             pictureHorarios.SizeMode = PictureBoxSizeMode.Zoom;
@@ -222,7 +237,7 @@
             label2.AutoSize = true;
             label2.Cursor = Cursors.Hand;
             label2.ForeColor = Color.Transparent;
-            label2.Location = new Point(45, 260);
+            label2.Location = new Point(55, 260);
             label2.Name = "label2";
             label2.Size = new Size(54, 16);
             label2.TabIndex = 0;
@@ -246,7 +261,7 @@
             lbldashboard.AutoSize = true;
             lbldashboard.Cursor = Cursors.Hand;
             lbldashboard.ForeColor = Color.Transparent;
-            lbldashboard.Location = new Point(45, 201);
+            lbldashboard.Location = new Point(55, 223);
             lbldashboard.Name = "lbldashboard";
             lbldashboard.Size = new Size(71, 16);
             lbldashboard.TabIndex = 3;
@@ -257,7 +272,7 @@
             // 
             picturedashboard.Cursor = Cursors.Hand;
             picturedashboard.Image = (Image)resources.GetObject("picturedashboard.Image");
-            picturedashboard.Location = new Point(12, 192);
+            picturedashboard.Location = new Point(12, 216);
             picturedashboard.Name = "picturedashboard";
             picturedashboard.Size = new Size(37, 34);
             picturedashboard.SizeMode = PictureBoxSizeMode.Zoom;
@@ -281,7 +296,7 @@
             // 
             picturesair.Cursor = Cursors.Hand;
             picturesair.Image = (Image)resources.GetObject("picturesair.Image");
-            picturesair.Location = new Point(12, 746);
+            picturesair.Location = new Point(12, 635);
             picturesair.Name = "picturesair";
             picturesair.Size = new Size(27, 31);
             picturesair.SizeMode = PictureBoxSizeMode.Zoom;
@@ -301,7 +316,6 @@
             // 
             // panel2
             // 
-            panel2.Controls.Add(label1);
             panel2.Controls.Add(pictureBox2);
             panel2.Dock = DockStyle.Top;
             panel2.Location = new Point(173, 0);
@@ -324,14 +338,24 @@
             // 
             panelContent.Location = new Point(179, 49);
             panelContent.Name = "panelContent";
-            panelContent.Size = new Size(977, 760);
+            panelContent.Size = new Size(977, 595);
             panelContent.TabIndex = 3;
+            // 
+            // panel3
+            // 
+            panel3.Controls.Add(label1);
+            panel3.Dock = DockStyle.Bottom;
+            panel3.Location = new Point(173, 650);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(983, 25);
+            panel3.TabIndex = 0;
             // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 16F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1156, 809);
+            ClientSize = new Size(1156, 675);
+            Controls.Add(panel3);
             Controls.Add(panelContent);
             Controls.Add(panel2);
             Controls.Add(panel1);
@@ -352,8 +376,9 @@
             ((System.ComponentModel.ISupportInitialize)picturesair).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel2.ResumeLayout(false);
-            panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            panel3.ResumeLayout(false);
+            panel3.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -381,5 +406,7 @@
         private Label label4;
         private Label lblusuarios;
         private PictureBox pictureUsuario;
+        private Panel panel3;
+        private Label Utilitários;
     }
 }
