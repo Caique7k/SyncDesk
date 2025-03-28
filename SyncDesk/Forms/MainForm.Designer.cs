@@ -46,9 +46,10 @@
             pictureBox3 = new PictureBox();
             lbldashboard = new Label();
             picturedashboard = new PictureBox();
-            lblsair = new Label();
-            picturesair = new PictureBox();
             pictureBox1 = new PictureBox();
+            panel4 = new Panel();
+            picturesair = new PictureBox();
+            lblsair = new Label();
             panel2 = new Panel();
             pictureBox2 = new PictureBox();
             panelContent = new Panel();
@@ -60,8 +61,9 @@
             ((System.ComponentModel.ISupportInitialize)pictureHorarios).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picturedashboard).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)picturesair).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)picturesair).BeginInit();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel3.SuspendLayout();
@@ -94,13 +96,12 @@
             panel1.Controls.Add(pictureBox3);
             panel1.Controls.Add(lbldashboard);
             panel1.Controls.Add(picturedashboard);
-            panel1.Controls.Add(lblsair);
-            panel1.Controls.Add(picturesair);
             panel1.Controls.Add(pictureBox1);
+            panel1.Controls.Add(panel4);
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(173, 675);
+            panel1.Size = new Size(173, 780);
             panel1.TabIndex = 1;
             // 
             // Utilitários
@@ -280,30 +281,6 @@
             picturedashboard.TabStop = false;
             picturedashboard.Click += picturedashboard_Click;
             // 
-            // lblsair
-            // 
-            lblsair.AutoSize = true;
-            lblsair.Cursor = Cursors.Hand;
-            lblsair.ForeColor = Color.Transparent;
-            lblsair.Location = new Point(42, 755);
-            lblsair.Name = "lblsair";
-            lblsair.Size = new Size(46, 16);
-            lblsair.TabIndex = 3;
-            lblsair.Text = "Logout";
-            lblsair.Click += lblsair_Click;
-            // 
-            // picturesair
-            // 
-            picturesair.Cursor = Cursors.Hand;
-            picturesair.Image = (Image)resources.GetObject("picturesair.Image");
-            picturesair.Location = new Point(12, 635);
-            picturesair.Name = "picturesair";
-            picturesair.Size = new Size(27, 31);
-            picturesair.SizeMode = PictureBoxSizeMode.Zoom;
-            picturesair.TabIndex = 4;
-            picturesair.TabStop = false;
-            picturesair.Click += picturesair_Click;
-            // 
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
@@ -313,6 +290,39 @@
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
+            // 
+            // panel4
+            // 
+            panel4.Controls.Add(picturesair);
+            panel4.Controls.Add(lblsair);
+            panel4.Location = new Point(0, 633);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(173, 65);
+            panel4.TabIndex = 13;
+            // 
+            // picturesair
+            // 
+            picturesair.Cursor = Cursors.Hand;
+            picturesair.Image = (Image)resources.GetObject("picturesair.Image");
+            picturesair.Location = new Point(3, 28);
+            picturesair.Name = "picturesair";
+            picturesair.Size = new Size(27, 31);
+            picturesair.SizeMode = PictureBoxSizeMode.Zoom;
+            picturesair.TabIndex = 4;
+            picturesair.TabStop = false;
+            picturesair.Click += picturesair_Click;
+            // 
+            // lblsair
+            // 
+            lblsair.AutoSize = true;
+            lblsair.Cursor = Cursors.Hand;
+            lblsair.ForeColor = Color.Transparent;
+            lblsair.Location = new Point(55, 34);
+            lblsair.Name = "lblsair";
+            lblsair.Size = new Size(46, 16);
+            lblsair.TabIndex = 3;
+            lblsair.Text = "Logout";
+            lblsair.Click += lblsair_Click;
             // 
             // panel2
             // 
@@ -345,7 +355,7 @@
             // 
             panel3.Controls.Add(label1);
             panel3.Dock = DockStyle.Bottom;
-            panel3.Location = new Point(173, 650);
+            panel3.Location = new Point(173, 755);
             panel3.Name = "panel3";
             panel3.Size = new Size(983, 25);
             panel3.TabIndex = 0;
@@ -354,7 +364,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 16F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1156, 675);
+            ClientSize = new Size(1156, 780);
             Controls.Add(panel3);
             Controls.Add(panelContent);
             Controls.Add(panel2);
@@ -362,7 +372,7 @@
             Font = new Font("Bahnschrift", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Name = "MainForm";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "MainForm";
+            Text = "SyncDesk";
             WindowState = FormWindowState.Maximized;
             Load += MainForm_Load;
             panel1.ResumeLayout(false);
@@ -373,8 +383,10 @@
             ((System.ComponentModel.ISupportInitialize)pictureHorarios).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)picturedashboard).EndInit();
-            ((System.ComponentModel.ISupportInitialize)picturesair).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            panel4.ResumeLayout(false);
+            panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)picturesair).EndInit();
             panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             panel3.ResumeLayout(false);
@@ -408,5 +420,6 @@
         private PictureBox pictureUsuario;
         private Panel panel3;
         private Label Utilitários;
+        private Panel panel4;
     }
 }
