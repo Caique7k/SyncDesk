@@ -66,12 +66,12 @@ namespace SyncDesk.SyncDesk.Forms
 
         private void label2_Click(object sender, EventArgs e)
         {
-            LoadContent(new Clientes());
+            LoadContent(new Clientes(usuarioNome));
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            LoadContent(new Clientes());
+            LoadContent(new Clientes(usuarioNome));
         }
 
         private void lblhorarios_Click(object sender, EventArgs e)
