@@ -25,6 +25,7 @@ namespace SyncDesk.SyncDesk.Forms
         {
             public static string nome { get; set; }
             public static string tipo { get; set; }
+            public static string id { get; set; }
         }
 
         private void LoginForm_Load(object sender, EventArgs e)
@@ -43,12 +44,12 @@ namespace SyncDesk.SyncDesk.Forms
             {
                 if (userType == "admin")
                 {
-                    MainForm mainForm = new MainForm(usuarioLogado.nome, usuarioLogado.tipo);//aqui seta o nome e tipo do usuario logado que pede no construtor do mainform
+                    MainForm mainForm = new MainForm(usuarioLogado.nome, usuarioLogado.tipo, usuarioLogado.id);//aqui seta o nome e tipo do usuario logado que pede no construtor do mainform
                     mainForm.Show();
                 }
                 else
                 {
-                    MainForm mainForm = new MainForm(usuarioLogado.nome, usuarioLogado.tipo);
+                    MainForm mainForm = new MainForm(usuarioLogado.nome, usuarioLogado.tipo, usuarioLogado.id);
                     mainForm.Show();
                 }
                 this.Hide();// esconde a tela de login 
@@ -60,7 +61,7 @@ namespace SyncDesk.SyncDesk.Forms
         }
         private string ValidateLogin(string email, string senha)
         {
-            string query = "SELECT tipo_usuario, nome FROM usuarios WHERE email = @email AND senha = @senha LIMIT 1";
+            string query = "SELECT tipo_usuario, nome, id FROM usuarios WHERE email = @email AND senha = @senha LIMIT 1";
 
             using (var conn = Database.GetConnection())
             {
@@ -77,10 +78,12 @@ namespace SyncDesk.SyncDesk.Forms
                             {
                                 string tipoUsuario = reader["tipo_usuario"].ToString();
                                 string nomeUsuario = reader["nome"].ToString();
+                                string idUsuario = reader["id"].ToString();
 
                                 //armazena nome e tipo do usuario logado na variavel estatica usuarioLogado
                                 usuarioLogado.nome = nomeUsuario;
                                 usuarioLogado.tipo = tipoUsuario;
+                                usuarioLogado.id = idUsuario;
 
                                 return tipoUsuario;
                             }

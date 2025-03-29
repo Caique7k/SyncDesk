@@ -15,11 +15,13 @@ namespace SyncDesk.SyncDesk.Forms
     public partial class FormAdicionarCliente : Form
     {
         public string usuarioNome;
-        public FormAdicionarCliente(string nome)
+        public string usuarioId;
+        public FormAdicionarCliente(string nome, string usuarioId)
         {
             InitializeComponent();
             usuarioNome = nome;
             label6.Text = usuarioNome;
+            this.usuarioId = usuarioId;
         }
 
         private void FormAdicionarCliente_Load(object sender, EventArgs e)
@@ -27,52 +29,55 @@ namespace SyncDesk.SyncDesk.Forms
 
         }
 
-        private void btnSalvar_Click(object sender, EventArgs e)
-        {
 
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
-
-        private void label6_Click(object sender, EventArgs e)
+        private void btnadd_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void btnSalvar_Click_1(object sender, EventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(textBoxNome.Text) ||
-       string.IsNullOrWhiteSpace(textBoxTelefone.Text) ||
-       string.IsNullOrWhiteSpace(textBoxEmail.Text) ||
-       string.IsNullOrWhiteSpace(textBoxEndereco.Text))
+            if (string.IsNullOrEmpty(textBoxNome.Text) || string.IsNullOrEmpty(textBoxTelefone.Text) || string.IsNullOrEmpty(textBoxEndereco.Text) || string.IsNullOrEmpty(textBoxEmail.Text))
             {
-                MessageBox.Show("Por favor, preencha todos os campos.");
-                return; // Não execute o comando se algum campo estiver vazio
+                MessageBox.Show("Preencha todos os campos!", "ERRO!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-            string query = "INSERT INTO clientes (nome, telefone, email, endereco, criado_por) VALUES (@nome, @telefone, @email, @endereco, @criado_por)";
-            using (var conn = Database.GetConnection())
+            else
             {
-                try
+                string query = "INSERT INTO clientes (nome, telefone, email, endereco, criado_por) VALUES (@nome, @telefone, @email, @endereco, @criado_por)";
+                using (var conn = Database.GetConnection())
                 {
-                    conn.Open(); // Tente abrir a conexão
-                    using (var cmd = new NpgsqlCommand(query, conn))
+                    try
                     {
-                        cmd.Parameters.AddWithValue("nome", textBoxNome.Text);
-                        cmd.Parameters.AddWithValue("telefone", textBoxTelefone.Text);
-                        cmd.Parameters.AddWithValue("email", textBoxEmail.Text);
-                        cmd.Parameters.AddWithValue("endereco", textBoxEndereco.Text);
-                        cmd.Parameters.AddWithValue("criado_por", usuarioNome);
+                        if (conn.State != ConnectionState.Open)
+                        {
+                            conn.Open(); // Tente abrir a conexão apenas se não estiver aberta
+                        }
 
-                        cmd.ExecuteNonQuery(); // Execute o comando
-                        this.DialogResult = DialogResult.OK;
-                        this.Close();
+                        using (var cmd = new NpgsqlCommand(query, conn))
+                        {
+                            cmd.Parameters.AddWithValue("nome", textBoxNome.Text);
+                            cmd.Parameters.AddWithValue("telefone", textBoxTelefone.Text);
+                            cmd.Parameters.AddWithValue("email", textBoxEmail.Text);
+                            cmd.Parameters.AddWithValue("endereco", textBoxEndereco.Text);
+                            cmd.Parameters.AddWithValue("criado_por", int.Parse(usuarioId));
+
+                            cmd.ExecuteNonQuery(); // Execute o comando
+                            this.DialogResult = DialogResult.OK;
+                            MessageBox.Show("Cliente adicionado com sucesso!");
+                            this.Close();
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(usuarioId);
+                        MessageBox.Show($"Erro ao adicionar cliente: {ex.Message}");
                     }
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"Erro ao adicionar cliente: {ex.Message}");
-                }
+
             }
         }
     }
 }
+    
+
 

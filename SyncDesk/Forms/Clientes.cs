@@ -13,12 +13,13 @@ namespace SyncDesk.SyncDesk.Forms
     {
         public string usuarioNome;
         public string usuarioTipo;
-        public Clientes(string nome)
+        public string usuarioId;
+        public Clientes(string nome, string usuarioId)
         {
             InitializeComponent();
             usuarioNome = nome;
             LoadClientes(); // Carrega os clientes ao inicializar
-
+            this.usuarioId = usuarioId;
         }
 
         private void LoadClientes()
@@ -52,16 +53,12 @@ namespace SyncDesk.SyncDesk.Forms
 
         }
 
-        private void btnAdd_Click(object sender, EventArgs e)
+       
+
+        private void btnAddCliente_Click(object sender, EventArgs e)
         {
-            // Lógica para adicionar um novo cliente
-            using (var form = new FormAdicionarCliente(usuarioNome))
-            {
-                if (form.ShowDialog() == DialogResult.OK)
-                {
-                    LoadClientes(); // Recarrega a lista após adicionar
-                }
-            }
+            FormAdicionarCliente formAdicionarCliente = new FormAdicionarCliente(usuarioNome, usuarioId);
+            formAdicionarCliente.ShowDialog();
         }
     }
-}
+    }

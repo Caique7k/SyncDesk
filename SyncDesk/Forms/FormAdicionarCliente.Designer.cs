@@ -38,8 +38,8 @@
             textBoxEndereco = new TextBox();
             label5 = new Label();
             label6 = new Label();
-            btnSalvar = new Button();
             btnCancelar = new Button();
+            btnadd = new Button();
             SuspendLayout();
             // 
             // label1
@@ -118,38 +118,42 @@
             // label6
             // 
             label6.AutoSize = true;
+            label6.Cursor = Cursors.No;
             label6.Location = new Point(97, 160);
             label6.Name = "label6";
             label6.Size = new Size(48, 18);
             label6.TabIndex = 9;
             label6.Text = "label6";
             // 
-            // btnSalvar
-            // 
-            btnSalvar.Cursor = Cursors.Hand;
-            btnSalvar.Location = new Point(16, 211);
-            btnSalvar.Name = "btnSalvar";
-            btnSalvar.Size = new Size(75, 23);
-            btnSalvar.TabIndex = 10;
-            btnSalvar.Text = "Salvar";
-            btnSalvar.UseVisualStyleBackColor = true;
-            // 
             // btnCancelar
             // 
+            btnCancelar.Cursor = Cursors.Hand;
             btnCancelar.Location = new Point(257, 216);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(75, 23);
             btnCancelar.TabIndex = 11;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = true;
+            btnCancelar.Click += btnCancelar_Click;
+            // 
+            // btnadd
+            // 
+            btnadd.Cursor = Cursors.Hand;
+            btnadd.Location = new Point(170, 216);
+            btnadd.Name = "btnadd";
+            btnadd.Size = new Size(81, 23);
+            btnadd.TabIndex = 12;
+            btnadd.Text = "Adicionar";
+            btnadd.UseVisualStyleBackColor = true;
+            btnadd.Click += btnadd_Click;
             // 
             // FormAdicionarCliente
             // 
             AutoScaleDimensions = new SizeF(8F, 18F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(344, 251);
+            Controls.Add(btnadd);
             Controls.Add(btnCancelar);
-            Controls.Add(btnSalvar);
             Controls.Add(label6);
             Controls.Add(label5);
             Controls.Add(textBoxEndereco);
@@ -183,7 +187,7 @@
         private TextBox textBoxEndereco;
         private Label label5;
         private Label label6;
-        private Button btnSalvar;
         private Button btnCancelar;
+        private Button btnadd;
     }
 }

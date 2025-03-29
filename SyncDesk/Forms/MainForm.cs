@@ -17,12 +17,14 @@ namespace SyncDesk.SyncDesk.Forms
     {
         public string usuarioNome;
         public string usuarioTipo;
-        public MainForm(string nome, string tipo)
+        public string usuarioId;
+        public MainForm(string nome, string tipo, string usuarioId)
         {
             InitializeComponent();
             usuarioNome = nome;
             usuarioTipo = tipo;
             label1.Text = $"Bem vindo, {usuarioNome}";
+            this.usuarioId = usuarioId;
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -66,12 +68,12 @@ namespace SyncDesk.SyncDesk.Forms
 
         private void label2_Click(object sender, EventArgs e)
         {
-            LoadContent(new Clientes(usuarioNome));
+            LoadContent(new Clientes(usuarioNome, usuarioId));
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            LoadContent(new Clientes(usuarioNome));
+            LoadContent(new Clientes(usuarioNome, usuarioId));
         }
 
         private void lblhorarios_Click(object sender, EventArgs e)

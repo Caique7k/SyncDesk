@@ -29,14 +29,18 @@ namespace SyncDesk.SyncDesk.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Clientes));
             dataGridView2 = new DataGridView();
             label1 = new Label();
             panel1 = new Panel();
-            btnDelete = new Button();
-            btnEdit = new Button();
-            btnAdd = new Button();
+            btnEditCliente = new PictureBox();
+            btnDeleteCliente = new PictureBox();
+            btnAddCliente = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)btnEditCliente).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)btnDeleteCliente).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)btnAddCliente).BeginInit();
             SuspendLayout();
             // 
             // dataGridView2
@@ -49,7 +53,7 @@ namespace SyncDesk.SyncDesk.Forms
             dataGridView2.Location = new Point(0, 74);
             dataGridView2.Margin = new Padding(3, 4, 3, 4);
             dataGridView2.Name = "dataGridView2";
-            dataGridView2.Size = new Size(780, 520);
+            dataGridView2.Size = new Size(948, 520);
             dataGridView2.TabIndex = 0;
             // 
             // label1
@@ -64,52 +68,51 @@ namespace SyncDesk.SyncDesk.Forms
             // 
             // panel1
             // 
-            panel1.Controls.Add(btnDelete);
-            panel1.Controls.Add(btnEdit);
-            panel1.Controls.Add(btnAdd);
+            panel1.Controls.Add(btnEditCliente);
+            panel1.Controls.Add(btnDeleteCliente);
+            panel1.Controls.Add(btnAddCliente);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(780, 64);
+            panel1.Size = new Size(948, 64);
             panel1.TabIndex = 2;
             panel1.Paint += panel1_Paint;
             // 
-            // btnDelete
+            // btnEditCliente
             // 
-            btnDelete.Cursor = Cursors.Hand;
-            btnDelete.Font = new Font("Bahnschrift", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnDelete.ImageAlign = ContentAlignment.MiddleLeft;
-            btnDelete.Location = new Point(697, 27);
-            btnDelete.Name = "btnDelete";
-            btnDelete.Size = new Size(68, 21);
-            btnDelete.TabIndex = 2;
-            btnDelete.Text = "Excluir";
-            btnDelete.UseVisualStyleBackColor = true;
+            btnEditCliente.Cursor = Cursors.Hand;
+            btnEditCliente.Image = (Image)resources.GetObject("btnEditCliente.Image");
+            btnEditCliente.Location = new Point(904, 22);
+            btnEditCliente.Name = "btnEditCliente";
+            btnEditCliente.Size = new Size(24, 24);
+            btnEditCliente.SizeMode = PictureBoxSizeMode.Zoom;
+            btnEditCliente.TabIndex = 3;
+            btnEditCliente.TabStop = false;
             // 
-            // btnEdit
+            // btnDeleteCliente
             // 
-            btnEdit.Cursor = Cursors.Hand;
-            btnEdit.Font = new Font("Bahnschrift", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnEdit.ImageAlign = ContentAlignment.MiddleLeft;
-            btnEdit.Location = new Point(623, 27);
-            btnEdit.Name = "btnEdit";
-            btnEdit.Size = new Size(68, 21);
-            btnEdit.TabIndex = 1;
-            btnEdit.Text = "Editar";
-            btnEdit.UseVisualStyleBackColor = true;
+            btnDeleteCliente.Cursor = Cursors.Hand;
+            btnDeleteCliente.Image = (Image)resources.GetObject("btnDeleteCliente.Image");
+            btnDeleteCliente.Location = new Point(863, 22);
+            btnDeleteCliente.Name = "btnDeleteCliente";
+            btnDeleteCliente.Size = new Size(24, 24);
+            btnDeleteCliente.SizeMode = PictureBoxSizeMode.Zoom;
+            btnDeleteCliente.TabIndex = 1;
+            btnDeleteCliente.TabStop = false;
             // 
-            // btnAdd
+            // btnAddCliente
             // 
-            btnAdd.Cursor = Cursors.Hand;
-            btnAdd.Font = new Font("Bahnschrift", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnAdd.ImageAlign = ContentAlignment.MiddleLeft;
-            btnAdd.Location = new Point(549, 27);
-            btnAdd.Name = "btnAdd";
-            btnAdd.Size = new Size(68, 21);
-            btnAdd.TabIndex = 0;
-            btnAdd.Text = "Adicionar ";
-            btnAdd.UseVisualStyleBackColor = true;
-            btnAdd.Click += btnAdd_Click;
+            btnAddCliente.AccessibleDescription = "Adicionar novo cliente";
+            btnAddCliente.Cursor = Cursors.Hand;
+            btnAddCliente.Image = (Image)resources.GetObject("btnAddCliente.Image");
+            btnAddCliente.Location = new Point(823, 23);
+            btnAddCliente.Name = "btnAddCliente";
+            btnAddCliente.Size = new Size(24, 24);
+            btnAddCliente.SizeMode = PictureBoxSizeMode.Zoom;
+            btnAddCliente.TabIndex = 0;
+            btnAddCliente.TabStop = false;
+            btnAddCliente.Tag = "";
+            btnAddCliente.Click += btnAddCliente_Click;
             // 
             // Clientes
             // 
@@ -121,9 +124,12 @@ namespace SyncDesk.SyncDesk.Forms
             Font = new Font("Bahnschrift", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Margin = new Padding(3, 4, 3, 4);
             Name = "Clientes";
-            Size = new Size(780, 594);
+            Size = new Size(948, 594);
             ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
             panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)btnEditCliente).EndInit();
+            ((System.ComponentModel.ISupportInitialize)btnDeleteCliente).EndInit();
+            ((System.ComponentModel.ISupportInitialize)btnAddCliente).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -141,8 +147,8 @@ namespace SyncDesk.SyncDesk.Forms
         private Label label1;
         private ListBox listBox1;
         private Panel panel1;
-        private Button btnAdd;
-        private Button btnDelete;
-        private Button btnEdit;
+        private PictureBox btnAddCliente;
+        private PictureBox btnEditCliente;
+        private PictureBox btnDeleteCliente;
     }
 }
