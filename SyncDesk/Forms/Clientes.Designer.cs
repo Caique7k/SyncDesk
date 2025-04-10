@@ -88,6 +88,7 @@ namespace SyncDesk.SyncDesk.Forms
             btnEditCliente.SizeMode = PictureBoxSizeMode.Zoom;
             btnEditCliente.TabIndex = 3;
             btnEditCliente.TabStop = false;
+            btnEditCliente.Click += btnEditCliente_Click;
             // 
             // btnDeleteCliente
             // 

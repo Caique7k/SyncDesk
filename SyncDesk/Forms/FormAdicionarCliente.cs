@@ -11,6 +11,7 @@ namespace SyncDesk.SyncDesk.Forms
     {
         public string usuarioNome;
         public string usuarioId;
+        public bool Editando { get; set; } = false;
         public event Action ClienteAdicionado;
 
         public FormAdicionarCliente(string nome, string usuarioId)

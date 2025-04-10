@@ -57,7 +57,7 @@ namespace SyncDesk.SyncDesk.Forms
                         {
                             DataTable dt = new DataTable();
                             dt.Load(reader);
-                            dataGridView2.DataSource = dt; 
+                            dataGridView2.DataSource = dt;
 
                             // Oculta a coluna de ID para o usuário
                             if (dataGridView2.Columns.Contains("id"))
@@ -74,21 +74,21 @@ namespace SyncDesk.SyncDesk.Forms
 
         private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e) // linha selecionada
         {
-            
+
             if (e.RowIndex < 0 || e.ColumnIndex < 0) return;// verifica se a linha clicada esta dentro do datagridview
-           
+
             foreach (DataGridViewRow row in dataGridView2.Rows) //estrutura de repetição para desmarcar todas as linhas quando uma só é clicada, deixando somente a atual
-         
+
             {
                 row.Selected = false;
             }
             // Seleciona a linha clicada
             dataGridView2.Rows[e.RowIndex].Selected = true; // marca visualmente toda a linha clicada
-            
+
             ClienteSelecionado.id = dataGridView2.Rows[e.RowIndex].Cells["id"].Value.ToString(); //armazena o id do cliente selecionado na variavel ClienteSelecionado.id
         }
-        
-        
+
+
 
         private void btnAddCliente_Click(object sender, EventArgs e)
         {
@@ -120,7 +120,7 @@ namespace SyncDesk.SyncDesk.Forms
         public void excluiCliente(string clienteId)
         {
             string query = "DELETE FROM clientes WHERE id = @id";
-            using (var conn = Database.GetConnection())   
+            using (var conn = Database.GetConnection())
             {
                 using (var cmd = new NpgsqlCommand(query, conn))
                 {
@@ -142,6 +142,20 @@ namespace SyncDesk.SyncDesk.Forms
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
+        }
+
+        private void btnEditCliente_Click(object sender, EventArgs e)
+        {
+            if (ClienteSelecionado.id == null)
+            {
+                MessageBox.Show("Selecione um cliente para editar.");
+            }
+            else
+            {
+                var formEditarCliente = new FormEditarCliente(ClienteSelecionado.id, usuarioNome, usuarioId);
+                formEditarCliente.ShowDialog();
+            }
+
         }
     }
 }
