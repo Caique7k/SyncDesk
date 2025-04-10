@@ -304,7 +304,7 @@
             // 
             picturesair.Cursor = Cursors.Hand;
             picturesair.Image = (Image)resources.GetObject("picturesair.Image");
-            picturesair.Location = new Point(3, 28);
+            picturesair.Location = new Point(22, 31);
             picturesair.Name = "picturesair";
             picturesair.Size = new Size(27, 31);
             picturesair.SizeMode = PictureBoxSizeMode.Zoom;

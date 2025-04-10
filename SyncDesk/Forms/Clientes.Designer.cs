@@ -99,6 +99,7 @@ namespace SyncDesk.SyncDesk.Forms
             btnDeleteCliente.SizeMode = PictureBoxSizeMode.Zoom;
             btnDeleteCliente.TabIndex = 1;
             btnDeleteCliente.TabStop = false;
+            btnDeleteCliente.Click += btnDeleteCliente_Click;
             // 
             // btnAddCliente
             // 
