@@ -22,7 +22,7 @@ namespace SyncDesk.SyncDesk.Forms
             this.usuarioId = usuarioId;
         }
 
-        private void LoadClientes()
+        public void LoadClientes()
         {
             string query = "SELECT \r\n    c.nome AS \"Nome do Cliente\", \r\n    c.telefone AS \"Telefone do Cliente\", \r\n    c.email AS \"Email do Cliente\", \r\n    c.endereco AS \"Endereço do Cliente\", \r\n    u.nome AS \"Criado por\" \r\nFROM \r\n    clientes c\r\nJOIN \r\n    usuarios u ON c.criado_por = u.id\r\nORDER BY \r\n    c.nome;";
             using (var conn = Database.GetConnection())
@@ -58,7 +58,13 @@ namespace SyncDesk.SyncDesk.Forms
         private void btnAddCliente_Click(object sender, EventArgs e)
         {
             FormAdicionarCliente formAdicionarCliente = new FormAdicionarCliente(usuarioNome, usuarioId);
+
+            // Inscreva-se no evento ClienteAdicionado
+            formAdicionarCliente.ClienteAdicionado += () => LoadClientes();
+
+            // Exibe o formulário como um diálogo modal
             formAdicionarCliente.ShowDialog();
         }
+        
     }
     }

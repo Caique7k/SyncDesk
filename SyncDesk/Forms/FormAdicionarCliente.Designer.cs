@@ -31,7 +31,6 @@
             label1 = new Label();
             textBoxNome = new TextBox();
             label2 = new Label();
-            textBoxTelefone = new TextBox();
             label3 = new Label();
             textBoxEmail = new TextBox();
             label4 = new Label();
@@ -40,6 +39,7 @@
             label6 = new Label();
             btnCancelar = new Button();
             btnadd = new Button();
+            textBoxTelefone = new MaskedTextBox();
             SuspendLayout();
             // 
             // label1
@@ -66,13 +66,6 @@
             label2.Size = new Size(66, 18);
             label2.TabIndex = 2;
             label2.Text = "Telefone:";
-            // 
-            // textBoxTelefone
-            // 
-            textBoxTelefone.Location = new Point(84, 41);
-            textBoxTelefone.Name = "textBoxTelefone";
-            textBoxTelefone.Size = new Size(142, 26);
-            textBoxTelefone.TabIndex = 3;
             // 
             // label3
             // 
@@ -147,11 +140,20 @@
             btnadd.UseVisualStyleBackColor = true;
             btnadd.Click += btnadd_Click;
             // 
+            // textBoxTelefone
+            // 
+            textBoxTelefone.Location = new Point(84, 41);
+            textBoxTelefone.Mask = "(00) 00000-0000";
+            textBoxTelefone.Name = "textBoxTelefone";
+            textBoxTelefone.Size = new Size(147, 26);
+            textBoxTelefone.TabIndex = 13;
+            // 
             // FormAdicionarCliente
             // 
             AutoScaleDimensions = new SizeF(8F, 18F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(344, 251);
+            Controls.Add(textBoxTelefone);
             Controls.Add(btnadd);
             Controls.Add(btnCancelar);
             Controls.Add(label6);
@@ -160,7 +162,6 @@
             Controls.Add(label4);
             Controls.Add(textBoxEmail);
             Controls.Add(label3);
-            Controls.Add(textBoxTelefone);
             Controls.Add(label2);
             Controls.Add(textBoxNome);
             Controls.Add(label1);
@@ -180,7 +181,6 @@
         private Label label1;
         private TextBox textBoxNome;
         private Label label2;
-        private TextBox textBoxTelefone;
         private Label label3;
         private TextBox textBoxEmail;
         private Label label4;
@@ -189,5 +189,6 @@
         private Label label6;
         private Button btnCancelar;
         private Button btnadd;
+        private MaskedTextBox textBoxTelefone;
     }
 }
