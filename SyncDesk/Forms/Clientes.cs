@@ -97,6 +97,7 @@ namespace SyncDesk.SyncDesk.Forms
             // Inscreva-se no evento ClienteAdicionado
             formAdicionarCliente.ClienteAdicionado += () => LoadClientes();
 
+
             // Exibe o formulário como um diálogo modal
             formAdicionarCliente.ShowDialog();
         }
@@ -153,6 +154,7 @@ namespace SyncDesk.SyncDesk.Forms
             else
             {
                 var formEditarCliente = new FormEditarCliente(ClienteSelecionado.id, usuarioNome, usuarioId);
+                formEditarCliente.ClienteEditado += () => LoadClientes();
                 formEditarCliente.ShowDialog();
             }
 

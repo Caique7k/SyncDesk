@@ -78,7 +78,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(12, 95);
+            label3.Location = new Point(12, 92);
             label3.Name = "label3";
             label3.Size = new Size(49, 18);
             label3.TabIndex = 15;
@@ -86,7 +86,7 @@
             // 
             // textBoxEmailEditar
             // 
-            textBoxEmailEditar.Location = new Point(84, 92);
+            textBoxEmailEditar.Location = new Point(84, 89);
             textBoxEmailEditar.Name = "textBoxEmailEditar";
             textBoxEmailEditar.Size = new Size(178, 26);
             textBoxEmailEditar.TabIndex = 16;
@@ -94,7 +94,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(12, 142);
+            label4.Location = new Point(12, 128);
             label4.Name = "label4";
             label4.Size = new Size(73, 18);
             label4.TabIndex = 17;
@@ -102,7 +102,7 @@
             // 
             // textBoxEnderecoEditar
             // 
-            textBoxEnderecoEditar.Location = new Point(84, 139);
+            textBoxEnderecoEditar.Location = new Point(84, 128);
             textBoxEnderecoEditar.Name = "textBoxEnderecoEditar";
             textBoxEnderecoEditar.Size = new Size(228, 26);
             textBoxEnderecoEditar.TabIndex = 18;
@@ -110,7 +110,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(12, 203);
+            label5.Location = new Point(12, 168);
             label5.Name = "label5";
             label5.Size = new Size(79, 18);
             label5.TabIndex = 19;
@@ -120,7 +120,7 @@
             // 
             label6.AutoSize = true;
             label6.Cursor = Cursors.No;
-            label6.Location = new Point(97, 203);
+            label6.Location = new Point(97, 168);
             label6.Name = "label6";
             label6.Size = new Size(48, 18);
             label6.TabIndex = 20;
@@ -129,17 +129,18 @@
             // btnEdit
             // 
             btnEdit.Cursor = Cursors.Hand;
-            btnEdit.Location = new Point(170, 251);
+            btnEdit.Location = new Point(166, 194);
             btnEdit.Name = "btnEdit";
             btnEdit.Size = new Size(81, 23);
             btnEdit.TabIndex = 21;
             btnEdit.Text = "Editar";
             btnEdit.UseVisualStyleBackColor = true;
+            btnEdit.Click += btnEdit_Click;
             // 
             // btnCancelar
             // 
             btnCancelar.Cursor = Cursors.Hand;
-            btnCancelar.Location = new Point(257, 251);
+            btnCancelar.Location = new Point(253, 194);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(75, 23);
             btnCancelar.TabIndex = 22;
@@ -151,7 +152,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 18F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(340, 287);
+            ClientSize = new Size(340, 224);
             Controls.Add(btnCancelar);
             Controls.Add(btnEdit);
             Controls.Add(label6);
@@ -165,6 +166,7 @@
             Controls.Add(textBoxNomeEditar);
             Controls.Add(label1);
             Font = new Font("Bahnschrift", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Margin = new Padding(3, 4, 3, 4);
             Name = "FormEditarCliente";
             StartPosition = FormStartPosition.CenterScreen;
