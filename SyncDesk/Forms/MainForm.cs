@@ -78,12 +78,12 @@ namespace SyncDesk.SyncDesk.Forms
 
         private void lblhorarios_Click(object sender, EventArgs e)
         {
-            LoadContent(new Horarios());
+            LoadContent(new Horarios(usuarioId, usuarioNome));
         }
 
         private void pictureHorarios_Click(object sender, EventArgs e)
         {
-            LoadContent(new Horarios());
+            LoadContent(new Horarios(usuarioId, usuarioNome));
         }
 
         private void lblentrada_Click(object sender, EventArgs e)
