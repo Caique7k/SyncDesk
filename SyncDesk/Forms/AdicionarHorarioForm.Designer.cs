@@ -39,6 +39,8 @@
             btnCancelar = new Button();
             label4 = new Label();
             label5 = new Label();
+            label6 = new Label();
+            maskedTextBoxHorario = new MaskedTextBox();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -55,7 +57,7 @@
             // 
             dateTimePicker1.Location = new Point(82, 12);
             dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(315, 27);
+            dateTimePicker1.Size = new Size(309, 27);
             dateTimePicker1.TabIndex = 1;
             // 
             // label2
@@ -78,7 +80,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(12, 96);
+            label3.Location = new Point(12, 148);
             label3.Name = "label3";
             label3.Size = new Size(86, 19);
             label3.TabIndex = 4;
@@ -87,7 +89,7 @@
             // panel1
             // 
             panel1.Controls.Add(textBoxDesc);
-            panel1.Location = new Point(12, 118);
+            panel1.Location = new Point(12, 170);
             panel1.Name = "panel1";
             panel1.Size = new Size(385, 175);
             panel1.TabIndex = 5;
@@ -104,7 +106,7 @@
             // btnAdd
             // 
             btnAdd.Cursor = Cursors.Hand;
-            btnAdd.Location = new Point(311, 313);
+            btnAdd.Location = new Point(311, 351);
             btnAdd.Name = "btnAdd";
             btnAdd.Size = new Size(86, 34);
             btnAdd.TabIndex = 1;
@@ -115,7 +117,7 @@
             // btnCancelar
             // 
             btnCancelar.Cursor = Cursors.Hand;
-            btnCancelar.Location = new Point(311, 363);
+            btnCancelar.Location = new Point(311, 391);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(86, 34);
             btnCancelar.TabIndex = 6;
@@ -126,7 +128,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(12, 328);
+            label4.Location = new Point(5, 391);
             label4.Name = "label4";
             label4.Size = new Size(93, 19);
             label4.TabIndex = 7;
@@ -135,17 +137,37 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(99, 328);
+            label5.Location = new Point(95, 391);
             label5.Name = "label5";
             label5.Size = new Size(55, 19);
             label5.TabIndex = 8;
             label5.Text = "label5";
             // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(12, 94);
+            label6.Name = "label6";
+            label6.Size = new Size(73, 19);
+            label6.TabIndex = 9;
+            label6.Text = "Horário: ";
+            // 
+            // maskedTextBoxHorario
+            // 
+            maskedTextBoxHorario.Location = new Point(82, 91);
+            maskedTextBoxHorario.Mask = "00:00";
+            maskedTextBoxHorario.Name = "maskedTextBoxHorario";
+            maskedTextBoxHorario.Size = new Size(49, 27);
+            maskedTextBoxHorario.TabIndex = 10;
+            maskedTextBoxHorario.ValidatingType = typeof(DateTime);
+            // 
             // AdicionarHorarioForm
             // 
             AutoScaleDimensions = new SizeF(9F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(403, 409);
+            ClientSize = new Size(403, 437);
+            Controls.Add(maskedTextBoxHorario);
+            Controls.Add(label6);
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(btnCancelar);
@@ -181,5 +203,7 @@
         private Button btnCancelar;
         private Label label4;
         private Label label5;
+        private Label label6;
+        private MaskedTextBox maskedTextBoxHorario;
     }
 }
