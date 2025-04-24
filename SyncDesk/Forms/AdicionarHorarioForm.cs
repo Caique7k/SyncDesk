@@ -19,6 +19,7 @@ namespace SyncDesk.SyncDesk.Forms
         public string usuarioId;
         public string usuarioNome;
         public string usuarioTipo;
+       
 
         public class Cliente
         {
@@ -30,6 +31,7 @@ namespace SyncDesk.SyncDesk.Forms
                 return Nome;
             }
         }
+        public event Action HorarioAdicionado;
         public AdicionarHorarioForm(string nome, string id)
         {
             InitializeComponent();
@@ -38,7 +40,7 @@ namespace SyncDesk.SyncDesk.Forms
             label5.Text = usuarioNome;
             carregarClientes();
         }
-        
+
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
@@ -55,7 +57,7 @@ namespace SyncDesk.SyncDesk.Forms
             string query = "SELECT id, nome FROM clientes";
             using (var conn = Database.GetConnection())
             {
-               
+
                 using (var cmd = new NpgsqlCommand(query, conn))
                 {
                     using (var reader = cmd.ExecuteReader())
@@ -66,7 +68,7 @@ namespace SyncDesk.SyncDesk.Forms
                         {
                             clientes.Add(new Cliente // adiciona as informações na classe cliente
                             {
-                                Id = reader["id"].ToString(), 
+                                Id = reader["id"].ToString(),
                                 Nome = reader["nome"].ToString()
                             });
                         }
@@ -76,10 +78,10 @@ namespace SyncDesk.SyncDesk.Forms
                         comboBoxCliente.ValueMember = "Id";
                         comboBoxCliente.SelectedIndex = 0;
                         comboBoxCliente.Refresh();
-                   
+
                     }
 
-                    
+
                 }
             }
         }
@@ -109,26 +111,40 @@ namespace SyncDesk.SyncDesk.Forms
 
             using (var conn = Database.GetConnection())
             {
-                using (var cmd = new NpgsqlCommand(query, conn))
+                try
                 {
-                    cmd.Parameters.AddWithValue("@clienteId", int.Parse(clienteSelecionado.Id));
-                    cmd.Parameters.AddWithValue("@dataHora", dataHorario);
-                    cmd.Parameters.AddWithValue("@descricao", descricao);
-                    cmd.Parameters.AddWithValue("@criadoPor", int.Parse(usuarioId));
-                    cmd.Parameters.AddWithValue("@criadoEm", DateTime.Now);
-                    cmd.Parameters.AddWithValue("@Hora", horario);
+                    if (conn.State != ConnectionState.Open)
+                    {
+                        conn.Open(); // Tente abrir a conexão apenas se não estiver aberta
+                    }
+                    using (var cmd = new NpgsqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@clienteId", int.Parse(clienteSelecionado.Id));
+                        cmd.Parameters.AddWithValue("@dataHora", dataHorario);
+                        cmd.Parameters.AddWithValue("@descricao", descricao);
+                        cmd.Parameters.AddWithValue("@criadoPor", int.Parse(usuarioId));
+                        cmd.Parameters.AddWithValue("@criadoEm", DateTime.Now);
+                        cmd.Parameters.AddWithValue("@Hora", horario);
 
-                    try
-                    {
+                       
+
+
                         cmd.ExecuteNonQuery();
+                        HorarioAdicionado?.Invoke();
                         MessageBox.Show("Horário adicionado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+                        this.Close();
+
+
                     }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Erro ao adicionar horário: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+                }catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao adicionar horário: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
     }
 }
+
+

@@ -330,7 +330,7 @@
             panel2.Dock = DockStyle.Top;
             panel2.Location = new Point(173, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(983, 43);
+            panel2.Size = new Size(953, 43);
             panel2.TabIndex = 2;
             // 
             // pictureBox2
@@ -339,7 +339,7 @@
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
             pictureBox2.Location = new Point(0, 8);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(983, 35);
+            pictureBox2.Size = new Size(953, 35);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 3;
             pictureBox2.TabStop = false;
@@ -348,7 +348,7 @@
             // 
             panelContent.Location = new Point(179, 49);
             panelContent.Name = "panelContent";
-            panelContent.Size = new Size(977, 595);
+            panelContent.Size = new Size(939, 595);
             panelContent.TabIndex = 3;
             // 
             // panel3
@@ -357,19 +357,21 @@
             panel3.Dock = DockStyle.Bottom;
             panel3.Location = new Point(173, 755);
             panel3.Name = "panel3";
-            panel3.Size = new Size(983, 25);
+            panel3.Size = new Size(953, 25);
             panel3.TabIndex = 0;
             // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 16F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1156, 780);
+            ClientSize = new Size(1126, 780);
             Controls.Add(panel3);
             Controls.Add(panelContent);
             Controls.Add(panel2);
             Controls.Add(panel1);
             Font = new Font("Bahnschrift", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
+            MaximizeBox = false;
             Name = "MainForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "SyncDesk";
