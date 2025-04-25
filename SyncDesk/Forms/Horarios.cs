@@ -22,8 +22,8 @@ namespace SyncDesk.SyncDesk.Forms
         public class HorarioSelecionado
         {
             public static string id { get; set; }
-            }
-        
+        }
+
         public Horarios(string id, string nome)
         {
             InitializeComponent();
@@ -33,7 +33,7 @@ namespace SyncDesk.SyncDesk.Forms
             dataGridView1.CellClick += dataGridView1_CellClick;
             dataGridView1.CellDoubleClick += dataGridView1_CellDoubleClick;
         }
-        
+
 
         private void pictureBoxAdd_Click(object sender, EventArgs e)
         {
@@ -129,5 +129,55 @@ namespace SyncDesk.SyncDesk.Forms
             }
         }
 
+        private void pictureBoxDelete_Click(object sender, EventArgs e)
+        {
+            if (HorarioSelecionado.id == null)
+            {
+                MessageBox.Show("Selecione um horário para excluir!", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            else
+            {
+                DeleteHorario(HorarioSelecionado.id);
+            }
+        }
+
+        private void DeleteHorario(string id)
+        {
+            string query = "Delete FROM horarios WHERE id = @id";
+
+            using (var conn = Database.GetConnection())
+            {
+                try
+                {
+                    if (conn.State != ConnectionState.Open)
+                    {
+                        conn.Open(); // Tente abrir a conexão apenas se não estiver aberta
+                    }
+                    using (var cmd = new NpgsqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("id", int.Parse(id));
+
+                        var result = MessageBox.Show("Confirma a exclusão do horário?", "Atenção!", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+                        if (result == DialogResult.Yes)
+                        {
+                            cmd.ExecuteReader();
+                            MessageBox.Show("Horário removido com sucesso!");
+                            LoadHorarios();
+                            HorarioSelecionado.id = null;
+                        }
+
+                        
+                    }
+                    }
+                catch(Exception ex)
+                {
+                    MessageBox.Show($"Erro ao excluir horário: {ex.Message}");
+                }
+            }
+
+
+        }
     }
+
 }
