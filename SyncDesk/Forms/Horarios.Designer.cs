@@ -79,6 +79,7 @@
             pictureBoxEdit.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBoxEdit.TabIndex = 3;
             pictureBoxEdit.TabStop = false;
+            pictureBoxEdit.Click += pictureBoxEdit_Click;
             // 
             // pictureBoxAdd
             // 

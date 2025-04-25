@@ -167,16 +167,47 @@ namespace SyncDesk.SyncDesk.Forms
                             HorarioSelecionado.id = null;
                         }
 
-                        
+
                     }
-                    }
-                catch(Exception ex)
+                }
+                catch (Exception ex)
                 {
                     MessageBox.Show($"Erro ao excluir horário: {ex.Message}");
                 }
             }
 
 
+        }
+
+        private void pictureBoxEdit_Click(object sender, EventArgs e)
+        {
+            if (HorarioSelecionado.id == null)
+            {
+                MessageBox.Show("Selecione um horário para editar!", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
+
+            string idHorario = HorarioSelecionado.id;
+            string clienteId = selectedRow.Cells["cliente_id"].Value.ToString();
+            string nomeCliente = selectedRow.Cells["Nome do Cliente"].Value.ToString();
+            string data = Convert.ToDateTime(selectedRow.Cells["Data"].Value).ToString("dd/MM/yyyy");
+            string horario = TimeSpan.Parse(selectedRow.Cells["Horário"].Value.ToString()).ToString(@"hh\:mm");
+            string descricao = selectedRow.Cells["Descrição"].Value.ToString();
+
+            FormEditarHorario formEditarHorario = new FormEditarHorario(
+                idHorario,
+                clienteId,
+                nomeCliente,
+                data,
+                horario,
+                descricao,
+                usuarioId,
+                usuarioNome
+            );
+
+            formEditarHorario.HorarioEditado += () => LoadHorarios(); // Se quiser atualizar após edição
+            formEditarHorario.ShowDialog();
         }
     }
 
