@@ -19,7 +19,7 @@ namespace SyncDesk.SyncDesk.Forms
         public string usuarioId;
 
         public event Action HorarioEditado;
-        public FormEditarHorario(string idHorario, string clienteId, string nomeCliente, string data, string horario, string descricao, string UsuarioId, string UsuarioNome)
+        public FormEditarHorario(string idHorario, string clienteId, string nomeCliente, string data, string horario, string descricao, string UsuarioId, string UsuarioNome, string criadopor)
         {
             InitializeComponent();
             this.horarioId = idHorario;
@@ -32,6 +32,8 @@ namespace SyncDesk.SyncDesk.Forms
             dateTimePickerEdit.Value = DateTime.Parse(data);
             maskedTextBoxHorarioEdit.Text = horario;
             textBoxDescEdit.Text = descricao;
+
+            label5.Text = criadopor;
         }
         private void CarregarClientes()
         {
@@ -72,7 +74,7 @@ namespace SyncDesk.SyncDesk.Forms
                 }
 
 
-                string query = "UPDATE horarios SET cliente_id = @cliente_id, data_hora = @data_hora, hora = @hora, descricao = @descricao, criado_por = @criado_por WHERE id = @id";
+                string query = "UPDATE horarios SET cliente_id = @cliente_id, data_hora = @data_hora, hora = @hora, descricao = @descricao WHERE id = @id";
 
                 using (var conn = Database.GetConnection())
                 using (var cmd = new NpgsqlCommand(query, conn))
@@ -81,7 +83,6 @@ namespace SyncDesk.SyncDesk.Forms
                     cmd.Parameters.AddWithValue("data_hora", dataHora);
                     cmd.Parameters.AddWithValue("hora", hora);
                     cmd.Parameters.AddWithValue("descricao", descricao);
-                    cmd.Parameters.AddWithValue("criado_por", int.Parse(usuarioId));
                     cmd.Parameters.AddWithValue("id", int.Parse(horarioId));
 
                     cmd.ExecuteNonQuery();

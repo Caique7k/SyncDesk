@@ -194,6 +194,7 @@ namespace SyncDesk.SyncDesk.Forms
             string data = Convert.ToDateTime(selectedRow.Cells["Data"].Value).ToString("dd/MM/yyyy");
             string horario = TimeSpan.Parse(selectedRow.Cells["Horário"].Value.ToString()).ToString(@"hh\:mm");
             string descricao = selectedRow.Cells["Descrição"].Value.ToString();
+            string criadoPor = selectedRow.Cells["Criado por"].Value.ToString();
 
             FormEditarHorario formEditarHorario = new FormEditarHorario(
                 idHorario,
@@ -203,7 +204,8 @@ namespace SyncDesk.SyncDesk.Forms
                 horario,
                 descricao,
                 usuarioId,
-                usuarioNome
+                usuarioNome,
+                criadoPor
             );
 
             formEditarHorario.HorarioEditado += () => LoadHorarios(); // Se quiser atualizar após edição
