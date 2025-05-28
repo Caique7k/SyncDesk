@@ -108,12 +108,26 @@ namespace SyncDesk.SyncDesk.Forms
 
         private void lblusuarios_Click(object sender, EventArgs e)
         {
-            LoadContent(new Usuario());
+            if (usuarioTipo == "admin")
+            {
+                LoadContent(new Usuario(usuarioId, usuarioNome));
+            }
+            else
+            {
+                MessageBox.Show("Você não tem permissão para acessar!", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
         }
 
         private void pictureUsuario_Click(object sender, EventArgs e)
         {
-            LoadContent(new Usuario());
+            if (usuarioTipo == "admin")
+            {
+                LoadContent(new Usuario(usuarioId, usuarioNome));
+            }
+            else
+            {
+                MessageBox.Show("Você não tem permissão para acessar!", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
         }
     }
 }
