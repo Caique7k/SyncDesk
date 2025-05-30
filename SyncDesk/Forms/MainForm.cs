@@ -98,12 +98,12 @@ namespace SyncDesk.SyncDesk.Forms
 
         private void lblsaida_Click(object sender, EventArgs e)
         {
-            LoadContent(new Saida());
+            LoadContent(new Saida(usuarioId, usuarioNome));
         }
 
         private void pictureSaida_Click(object sender, EventArgs e)
         {
-            LoadContent(new Saida());
+            LoadContent(new Saida(usuarioId, usuarioNome));
         }
 
         private void lblusuarios_Click(object sender, EventArgs e)

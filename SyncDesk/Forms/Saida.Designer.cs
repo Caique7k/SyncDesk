@@ -28,32 +28,117 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Saida));
+            panel1 = new Panel();
             label1 = new Label();
+            dataGridView1 = new DataGridView();
+            pictureBoxAdd = new PictureBox();
+            pictureBoxDelete = new PictureBox();
+            pictureBoxEdit = new PictureBox();
+            panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxAdd).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxDelete).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxEdit).BeginInit();
             SuspendLayout();
+            // 
+            // panel1
+            // 
+            panel1.Controls.Add(pictureBoxEdit);
+            panel1.Controls.Add(pictureBoxDelete);
+            panel1.Controls.Add(pictureBoxAdd);
+            panel1.Controls.Add(label1);
+            panel1.Dock = DockStyle.Top;
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(911, 77);
+            panel1.TabIndex = 1;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(301, 184);
+            label1.Font = new Font("Bahnschrift", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(3, 23);
             label1.Name = "label1";
-            label1.Size = new Size(34, 15);
-            label1.TabIndex = 0;
-            label1.Text = "saida";
+            label1.Size = new Size(67, 23);
+            label1.TabIndex = 3;
+            label1.Text = "Saídas";
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.BackgroundColor = SystemColors.ButtonFace;
+            dataGridView1.BorderStyle = BorderStyle.None;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Dock = DockStyle.Fill;
+            dataGridView1.Location = new Point(0, 77);
+            dataGridView1.Margin = new Padding(3, 4, 3, 4);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(911, 461);
+            dataGridView1.TabIndex = 4;
+            dataGridView1.CellClick += dataGridView1_CellClick;
+            // 
+            // pictureBoxAdd
+            // 
+            pictureBoxAdd.Cursor = Cursors.Hand;
+            pictureBoxAdd.Image = (Image)resources.GetObject("pictureBoxAdd.Image");
+            pictureBoxAdd.Location = new Point(799, 24);
+            pictureBoxAdd.Name = "pictureBoxAdd";
+            pictureBoxAdd.Size = new Size(24, 24);
+            pictureBoxAdd.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBoxAdd.TabIndex = 5;
+            pictureBoxAdd.TabStop = false;
+            pictureBoxAdd.Click += pictureBoxAdd_Click;
+            // 
+            // pictureBoxDelete
+            // 
+            pictureBoxDelete.Cursor = Cursors.Hand;
+            pictureBoxDelete.Image = (Image)resources.GetObject("pictureBoxDelete.Image");
+            pictureBoxDelete.Location = new Point(840, 24);
+            pictureBoxDelete.Name = "pictureBoxDelete";
+            pictureBoxDelete.Size = new Size(24, 24);
+            pictureBoxDelete.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBoxDelete.TabIndex = 6;
+            pictureBoxDelete.TabStop = false;
+            // 
+            // pictureBoxEdit
+            // 
+            pictureBoxEdit.Cursor = Cursors.Hand;
+            pictureBoxEdit.Image = (Image)resources.GetObject("pictureBoxEdit.Image");
+            pictureBoxEdit.Location = new Point(881, 24);
+            pictureBoxEdit.Name = "pictureBoxEdit";
+            pictureBoxEdit.Size = new Size(24, 24);
+            pictureBoxEdit.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBoxEdit.TabIndex = 7;
+            pictureBoxEdit.TabStop = false;
             // 
             // Saida
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 18F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(label1);
+            Controls.Add(dataGridView1);
+            Controls.Add(panel1);
+            Font = new Font("Bahnschrift", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "Saida";
-            Size = new Size(776, 480);
+            Size = new Size(911, 538);
             Load += Saida_Load;
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxAdd).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxDelete).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxEdit).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
+        private Panel panel1;
         private Label label1;
+        private DataGridView dataGridView1;
+        private PictureBox pictureBoxAdd;
+        private PictureBox pictureBoxDelete;
+        private PictureBox pictureBoxEdit;
     }
 }

@@ -106,7 +106,7 @@ namespace SyncDesk.SyncDesk.Forms
             // Seleciona a linha clicada
             dataGridView1.Rows[e.RowIndex].Selected = true; // marca visualmente toda a linha clicada
 
-            EntradaSelecionada.id = dataGridView1.Rows[e.RowIndex].Cells["id"].Value.ToString(); //armazena o id do cliente selecionado na variavel ClienteSelecionado.id
+            EntradaSelecionada.id = dataGridView1.Rows[e.RowIndex].Cells["id"].Value.ToString(); 
         }
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
