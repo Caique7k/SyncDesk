@@ -162,13 +162,35 @@ namespace SyncDesk.SyncDesk.Forms
                             HorarioSelecionado.id = null;
                         }
 
-
                     }
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show($"Erro ao excluir entrada: {ex.Message}");
                 }
+            }
+        }
+
+        private void pictureBoxEdit_Click(object sender, EventArgs e)
+        {
+            if (EntradaSelecionada.id == null)
+            {
+                MessageBox.Show("Selecione uma entrada para editar!", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            else
+            {
+                DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
+
+                string idEntrada = EntradaSelecionada.id;
+                string valorEntrada = selectedRow.Cells["Valor da entrada"].Value.ToString();
+                string data = Convert.ToDateTime(selectedRow.Cells["Data"].Value).ToString("dd/MM/yyyy");
+                string descricao = selectedRow.Cells["Descrição"].Value.ToString();
+                string criadoPor = selectedRow.Cells["Criado por"].Value.ToString();
+
+                FormEditarEntrada formEditarEntrada = new FormEditarEntrada(idEntrada, valorEntrada, data, descricao, criadoPor);
+                formEditarEntrada.EntradaEditada += () => CarregarEntradas();
+                formEditarEntrada.Show();
             }
         }
     }

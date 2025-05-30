@@ -87,6 +87,7 @@
             pictureBoxEdit.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBoxEdit.TabIndex = 6;
             pictureBoxEdit.TabStop = false;
+            pictureBoxEdit.Click += pictureBoxEdit_Click;
             // 
             // label1
             // 
