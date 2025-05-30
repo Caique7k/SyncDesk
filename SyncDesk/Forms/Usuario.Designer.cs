@@ -80,6 +80,7 @@
             btnDeleteUsuario.SizeMode = PictureBoxSizeMode.Zoom;
             btnDeleteUsuario.TabIndex = 4;
             btnDeleteUsuario.TabStop = false;
+            btnDeleteUsuario.Click += btnDeleteUsuario_Click;
             // 
             // btnEditUsuario
             // 
@@ -92,6 +93,7 @@
             btnEditUsuario.SizeMode = PictureBoxSizeMode.Zoom;
             btnEditUsuario.TabIndex = 5;
             btnEditUsuario.TabStop = false;
+            btnEditUsuario.Click += btnEditUsuario_Click;
             // 
             // panel2
             // 

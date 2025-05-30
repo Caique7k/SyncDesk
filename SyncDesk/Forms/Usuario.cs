@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Npgsql;
 using SyncDesk.Data;
 using static SyncDesk.SyncDesk.Forms.Clientes;
+using static SyncDesk.SyncDesk.Forms.Horarios;
 
 namespace SyncDesk.SyncDesk.Forms
 {
@@ -96,8 +97,79 @@ namespace SyncDesk.SyncDesk.Forms
         {
             FormAdicionarUsuario formAdicionarUsuario = new FormAdicionarUsuario();
             formAdicionarUsuario.UsuarioAdicionado += () => CarregarUsuarios();
-           
             formAdicionarUsuario.Show();
+        }
+
+        private void btnDeleteUsuario_Click(object sender, EventArgs e)
+        {
+            if (UsuarioSelecionado.id == null)
+            {
+                MessageBox.Show("Selecione um usuário para excluir.", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else
+            {
+                DeleteUsuario(UsuarioSelecionado.id);
+            }
+        }
+
+        private void DeleteUsuario(string id)
+        {
+            string query = "Delete FROM usuarios WHERE id = @id";
+
+            using (var conn = Database.GetConnection())
+            {
+                try
+                {
+                    if (conn.State != ConnectionState.Open)
+                    {
+                        conn.Open(); // Tente abrir a conexão apenas se não estiver aberta
+                    }
+                    using (var cmd = new NpgsqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("id", int.Parse(id));
+
+                        var result = MessageBox.Show("Confirma a exclusão do usuário?", "Atenção!", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+                        if (result == DialogResult.Yes)
+                        {
+                            cmd.ExecuteReader();
+                            MessageBox.Show("Usuário removido com sucesso!");
+                            CarregarUsuarios();
+                            HorarioSelecionado.id = null;
+                        }
+
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Erro ao excluir usuário: {ex.Message}");
+                }
+            }
+        }
+
+        private void btnEditUsuario_Click(object sender, EventArgs e)
+        {
+            if (UsuarioSelecionado.id == null)
+            {
+                MessageBox.Show("Selecione um usuário para editar.", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else
+            {
+                DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
+
+                string id = UsuarioSelecionado.id;
+                string nome = selectedRow.Cells["Nome do Usuário"].Value.ToString();
+                string email = selectedRow.Cells["Email do Usuário"].Value.ToString();
+                string senha = selectedRow.Cells["Senha Cadastrada"].Value.ToString();
+                string tipo = dataGridView1.SelectedRows[0].Cells["Tipo do Usuário"].Value?.ToString();
+
+                FormEditarUsuario formEditarUsuario = new FormEditarUsuario(id, nome, email, tipo, senha);
+                formEditarUsuario.UsuarioEditado += () => CarregarUsuarios();
+                formEditarUsuario.Show();
+            }
+
+            
         }
     }
 }
