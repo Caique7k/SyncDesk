@@ -124,5 +124,52 @@ namespace SyncDesk.SyncDesk.Forms
             }
         }
 
+        private void pictureBoxDelete_Click(object sender, EventArgs e)
+        {
+            if (EntradaSelecionada.id == null)
+            {
+                MessageBox.Show("Selecione uma entrada para excluir!", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            else
+            {
+                DeleteEntrada(EntradaSelecionada.id);
+            }
+        }
+
+        private void DeleteEntrada(string entradaId)
+        {
+            string query = "Delete FROM financeiro WHERE id = @id";
+
+            using (var conn = Database.GetConnection())
+            {
+                try
+                {
+                    if (conn.State != ConnectionState.Open)
+                    {
+                        conn.Open(); // Tente abrir a conexão apenas se não estiver aberta
+                    }
+                    using (var cmd = new NpgsqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("id", int.Parse(entradaId));
+
+                        var result = MessageBox.Show("Confirma a exclusão da entrada?", "Atenção!", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+                        if (result == DialogResult.Yes)
+                        {
+                            cmd.ExecuteReader();
+                            MessageBox.Show("Entrada removido com sucesso!");
+                            CarregarEntradas();
+                            HorarioSelecionado.id = null;
+                        }
+
+
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Erro ao excluir entrada: {ex.Message}");
+                }
+            }
+        }
     }
 }
