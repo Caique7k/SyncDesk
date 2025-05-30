@@ -110,7 +110,18 @@ namespace SyncDesk.SyncDesk.Forms
         }
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
+
+                string valorEntrada = row.Cells["Valor da entrada"].Value.ToString();
+                string data = Convert.ToDateTime(row.Cells["Data"].Value).ToString("dd/MM/yyyy");
+                string descricao = row.Cells["Descrição"].Value.ToString();
+                string criadoPor = row.Cells["Criado por"].Value.ToString();
+
+                VisualizarEntradaForm visualizarEntradaForm = new VisualizarEntradaForm(valorEntrada, data, descricao, criadoPor);
+                visualizarEntradaForm.Show();
+            }
         }
 
     }
