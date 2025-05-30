@@ -30,16 +30,16 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Saida));
             panel1 = new Panel();
+            pictureBoxEdit = new PictureBox();
+            pictureBoxDelete = new PictureBox();
+            pictureBoxAdd = new PictureBox();
             label1 = new Label();
             dataGridView1 = new DataGridView();
-            pictureBoxAdd = new PictureBox();
-            pictureBoxDelete = new PictureBox();
-            pictureBoxEdit = new PictureBox();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxAdd).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxDelete).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxEdit).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxDelete).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxAdd).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -53,6 +53,41 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(911, 77);
             panel1.TabIndex = 1;
+            // 
+            // pictureBoxEdit
+            // 
+            pictureBoxEdit.Cursor = Cursors.Hand;
+            pictureBoxEdit.Image = (Image)resources.GetObject("pictureBoxEdit.Image");
+            pictureBoxEdit.Location = new Point(881, 24);
+            pictureBoxEdit.Name = "pictureBoxEdit";
+            pictureBoxEdit.Size = new Size(24, 24);
+            pictureBoxEdit.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBoxEdit.TabIndex = 7;
+            pictureBoxEdit.TabStop = false;
+            // 
+            // pictureBoxDelete
+            // 
+            pictureBoxDelete.Cursor = Cursors.Hand;
+            pictureBoxDelete.Image = (Image)resources.GetObject("pictureBoxDelete.Image");
+            pictureBoxDelete.Location = new Point(840, 24);
+            pictureBoxDelete.Name = "pictureBoxDelete";
+            pictureBoxDelete.Size = new Size(24, 24);
+            pictureBoxDelete.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBoxDelete.TabIndex = 6;
+            pictureBoxDelete.TabStop = false;
+            pictureBoxDelete.Click += pictureBoxDelete_Click;
+            // 
+            // pictureBoxAdd
+            // 
+            pictureBoxAdd.Cursor = Cursors.Hand;
+            pictureBoxAdd.Image = (Image)resources.GetObject("pictureBoxAdd.Image");
+            pictureBoxAdd.Location = new Point(799, 24);
+            pictureBoxAdd.Name = "pictureBoxAdd";
+            pictureBoxAdd.Size = new Size(24, 24);
+            pictureBoxAdd.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBoxAdd.TabIndex = 5;
+            pictureBoxAdd.TabStop = false;
+            pictureBoxAdd.Click += pictureBoxAdd_Click;
             // 
             // label1
             // 
@@ -78,40 +113,6 @@
             dataGridView1.TabIndex = 4;
             dataGridView1.CellClick += dataGridView1_CellClick;
             // 
-            // pictureBoxAdd
-            // 
-            pictureBoxAdd.Cursor = Cursors.Hand;
-            pictureBoxAdd.Image = (Image)resources.GetObject("pictureBoxAdd.Image");
-            pictureBoxAdd.Location = new Point(799, 24);
-            pictureBoxAdd.Name = "pictureBoxAdd";
-            pictureBoxAdd.Size = new Size(24, 24);
-            pictureBoxAdd.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBoxAdd.TabIndex = 5;
-            pictureBoxAdd.TabStop = false;
-            pictureBoxAdd.Click += pictureBoxAdd_Click;
-            // 
-            // pictureBoxDelete
-            // 
-            pictureBoxDelete.Cursor = Cursors.Hand;
-            pictureBoxDelete.Image = (Image)resources.GetObject("pictureBoxDelete.Image");
-            pictureBoxDelete.Location = new Point(840, 24);
-            pictureBoxDelete.Name = "pictureBoxDelete";
-            pictureBoxDelete.Size = new Size(24, 24);
-            pictureBoxDelete.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBoxDelete.TabIndex = 6;
-            pictureBoxDelete.TabStop = false;
-            // 
-            // pictureBoxEdit
-            // 
-            pictureBoxEdit.Cursor = Cursors.Hand;
-            pictureBoxEdit.Image = (Image)resources.GetObject("pictureBoxEdit.Image");
-            pictureBoxEdit.Location = new Point(881, 24);
-            pictureBoxEdit.Name = "pictureBoxEdit";
-            pictureBoxEdit.Size = new Size(24, 24);
-            pictureBoxEdit.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBoxEdit.TabIndex = 7;
-            pictureBoxEdit.TabStop = false;
-            // 
             // Saida
             // 
             AutoScaleDimensions = new SizeF(8F, 18F);
@@ -125,10 +126,10 @@
             Load += Saida_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxAdd).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBoxDelete).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxEdit).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxDelete).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxAdd).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
 
