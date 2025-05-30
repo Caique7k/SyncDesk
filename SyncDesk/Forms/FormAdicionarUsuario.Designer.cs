@@ -41,6 +41,7 @@
             txtBoxConfirmaSenha = new TextBox();
             btnCancelar = new Button();
             btnCadastrar = new Button();
+            checkBoxMostrarSenha = new CheckBox();
             SuspendLayout();
             // 
             // label1
@@ -88,6 +89,7 @@
             // RbAdm
             // 
             RbAdm.AutoSize = true;
+            RbAdm.Cursor = Cursors.Hand;
             RbAdm.Location = new Point(136, 87);
             RbAdm.Name = "RbAdm";
             RbAdm.Size = new Size(122, 22);
@@ -99,6 +101,7 @@
             // RbUser
             // 
             RbUser.AutoSize = true;
+            RbUser.Cursor = Cursors.Hand;
             RbUser.Location = new Point(136, 115);
             RbUser.Name = "RbUser";
             RbUser.Size = new Size(131, 22);
@@ -118,7 +121,7 @@
             // 
             // txtBoxSenha
             // 
-            txtBoxSenha.Location = new Point(70, 159);
+            txtBoxSenha.Location = new Point(145, 159);
             txtBoxSenha.Name = "txtBoxSenha";
             txtBoxSenha.Size = new Size(137, 26);
             txtBoxSenha.TabIndex = 8;
@@ -141,27 +144,44 @@
             // 
             // btnCancelar
             // 
-            btnCancelar.Location = new Point(14, 255);
+            btnCancelar.Cursor = Cursors.Hand;
+            btnCancelar.Location = new Point(12, 287);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(75, 23);
             btnCancelar.TabIndex = 11;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = true;
+            btnCancelar.Click += btnCancelar_Click;
             // 
             // btnCadastrar
             // 
-            btnCadastrar.Location = new Point(188, 255);
+            btnCadastrar.Cursor = Cursors.Hand;
+            btnCadastrar.Location = new Point(188, 287);
             btnCadastrar.Name = "btnCadastrar";
             btnCadastrar.Size = new Size(88, 23);
             btnCadastrar.TabIndex = 12;
             btnCadastrar.Text = "Cadastrar";
             btnCadastrar.UseVisualStyleBackColor = true;
+            btnCadastrar.Click += btnCadastrar_Click;
+            // 
+            // checkBoxMostrarSenha
+            // 
+            checkBoxMostrarSenha.AutoSize = true;
+            checkBoxMostrarSenha.Cursor = Cursors.Hand;
+            checkBoxMostrarSenha.Location = new Point(145, 236);
+            checkBoxMostrarSenha.Name = "checkBoxMostrarSenha";
+            checkBoxMostrarSenha.Size = new Size(124, 22);
+            checkBoxMostrarSenha.TabIndex = 13;
+            checkBoxMostrarSenha.Text = "Mostrar senha";
+            checkBoxMostrarSenha.UseVisualStyleBackColor = true;
+            checkBoxMostrarSenha.CheckedChanged += checkBoxMostrarSenha_CheckedChanged;
             // 
             // FormAdicionarUsuario
             // 
             AutoScaleDimensions = new SizeF(8F, 18F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(288, 290);
+            ClientSize = new Size(288, 322);
+            Controls.Add(checkBoxMostrarSenha);
             Controls.Add(btnCadastrar);
             Controls.Add(btnCancelar);
             Controls.Add(txtBoxConfirmaSenha);
@@ -176,9 +196,12 @@
             Controls.Add(txtBoxNome);
             Controls.Add(label1);
             Font = new Font("Bahnschrift", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Margin = new Padding(3, 4, 3, 4);
+            MaximizeBox = false;
             Name = "FormAdicionarUsuario";
-            Text = "FormAdicionarUsuario";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Adicionar Usuario";
             ResumeLayout(false);
             PerformLayout();
         }
@@ -198,5 +221,6 @@
         private TextBox txtBoxConfirmaSenha;
         private Button btnCancelar;
         private Button btnCadastrar;
+        private CheckBox checkBoxMostrarSenha;
     }
 }

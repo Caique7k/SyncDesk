@@ -95,7 +95,8 @@ namespace SyncDesk.SyncDesk.Forms
         private void btnAddUsuario_Click(object sender, EventArgs e)
         {
             FormAdicionarUsuario formAdicionarUsuario = new FormAdicionarUsuario();
-
+            formAdicionarUsuario.UsuarioAdicionado += () => CarregarUsuarios();
+           
             formAdicionarUsuario.Show();
         }
     }
