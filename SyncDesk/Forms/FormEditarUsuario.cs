@@ -101,7 +101,7 @@ namespace SyncDesk.SyncDesk.Forms
             }
         }
 
-       
+
 
         private void checkBoxMostrarSenhaEdit_CheckedChanged(object sender, EventArgs e)
         {
@@ -109,6 +109,11 @@ namespace SyncDesk.SyncDesk.Forms
 
             txtBoxEditSenha.UseSystemPasswordChar = !mostrar;
             txtBoxEditConfirmaSenha.UseSystemPasswordChar = !mostrar;
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

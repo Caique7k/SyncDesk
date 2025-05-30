@@ -20,9 +20,14 @@ namespace SyncDesk.SyncDesk.Forms
         {
             public static string id { get; set; }
         }
-        public Entradas()
+
+        public string userId;
+        public string userName;
+        public Entradas(string id, string nome)
         {
             InitializeComponent();
+            this.userId = id;
+            this.userName = nome;
             CarregarEntradas();
             dataGridView1.CellClick += dataGridView1_CellClick;
             dataGridView1.CellDoubleClick += dataGridView1_CellDoubleClick;
@@ -30,7 +35,9 @@ namespace SyncDesk.SyncDesk.Forms
 
         private void pictureBoxAdd_Click(object sender, EventArgs e)
         {
-
+            FormAdicionarEntrada formAdicionarEntrada = new FormAdicionarEntrada(userId, userName);
+            formAdicionarEntrada.EntradaAdicionada += () => CarregarEntradas();
+            formAdicionarEntrada.Show();
         }
 
         private void CarregarEntradas()
@@ -68,6 +75,11 @@ namespace SyncDesk.SyncDesk.Forms
 
                             if (dataGridView1.Columns.Contains("Data"))
                                 dataGridView1.Columns["Data"].DefaultCellStyle.Format = "dd/MM/yyyy";
+                            if (dataGridView1.Columns.Contains("Valor da entrada"))
+                            {
+                                dataGridView1.Columns["Valor da entrada"].DefaultCellStyle.Format = "C2";
+                                dataGridView1.Columns["Valor da entrada"].DefaultCellStyle.FormatProvider = System.Globalization.CultureInfo.GetCultureInfo("pt-BR");
+                            }
 
 
 
