@@ -179,5 +179,28 @@ namespace SyncDesk.SyncDesk.Forms
                 formVisualizarSaida.Show();
             }
         }
+
+        private void pictureBoxEdit_Click(object sender, EventArgs e)
+        {
+            if (SaidaSelecionada.id == null)
+            {
+                MessageBox.Show("Selecione uma entrada para editar!", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            else
+            {
+                DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
+
+                string idSaida = SaidaSelecionada.id;
+                string valorSaida = selectedRow.Cells["Valor da saida"].Value.ToString();
+                string data = Convert.ToDateTime(selectedRow.Cells["Data"].Value).ToString("dd/MM/yyyy");
+                string descricao = selectedRow.Cells["Descrição"].Value.ToString();
+                string criadoPor = selectedRow.Cells["Criado por"].Value.ToString();
+
+                FormEditarSaida formEditarSaida = new FormEditarSaida(idSaida, valorSaida, data, descricao, criadoPor);
+                formEditarSaida.SaidaEditada += () => CarregarSaidas();
+                formEditarSaida.Show();
+            }
+        }
     }
 }

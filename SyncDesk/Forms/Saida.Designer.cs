@@ -64,6 +64,7 @@
             pictureBoxEdit.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBoxEdit.TabIndex = 7;
             pictureBoxEdit.TabStop = false;
+            pictureBoxEdit.Click += pictureBoxEdit_Click;
             // 
             // pictureBoxDelete
             // 

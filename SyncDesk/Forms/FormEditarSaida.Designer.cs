@@ -1,6 +1,6 @@
 ﻿namespace SyncDesk.SyncDesk.Forms
 {
-    partial class FormEditarEntrada
+    partial class FormEditarSaida
     {
         /// <summary>
         /// Required designer variable.
@@ -45,32 +45,32 @@
             label1.AutoSize = true;
             label1.Location = new Point(12, 33);
             label1.Name = "label1";
-            label1.Size = new Size(125, 18);
-            label1.TabIndex = 1;
-            label1.Text = "Valor da entrada: ";
+            label1.Size = new Size(110, 18);
+            label1.TabIndex = 2;
+            label1.Text = "Valor da saída: ";
             // 
             // txtBoxValorEdit
             // 
             txtBoxValorEdit.Location = new Point(133, 30);
             txtBoxValorEdit.Name = "txtBoxValorEdit";
             txtBoxValorEdit.Size = new Size(139, 26);
-            txtBoxValorEdit.TabIndex = 2;
+            txtBoxValorEdit.TabIndex = 3;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Location = new Point(12, 80);
             label2.Name = "label2";
-            label2.Size = new Size(121, 18);
-            label2.TabIndex = 7;
-            label2.Text = "Data da entrada: ";
+            label2.Size = new Size(106, 18);
+            label2.TabIndex = 8;
+            label2.Text = "Data da saída: ";
             // 
             // dateTimePickerEdit
             // 
             dateTimePickerEdit.Location = new Point(133, 74);
             dateTimePickerEdit.Name = "dateTimePickerEdit";
             dateTimePickerEdit.Size = new Size(139, 26);
-            dateTimePickerEdit.TabIndex = 8;
+            dateTimePickerEdit.TabIndex = 9;
             // 
             // F
             // 
@@ -78,7 +78,7 @@
             F.Location = new Point(12, 127);
             F.Name = "F";
             F.Size = new Size(74, 18);
-            F.TabIndex = 9;
+            F.TabIndex = 10;
             F.Text = "Descrição";
             // 
             // txtBoxDescricaoEdit
@@ -87,7 +87,7 @@
             txtBoxDescricaoEdit.Multiline = true;
             txtBoxDescricaoEdit.Name = "txtBoxDescricaoEdit";
             txtBoxDescricaoEdit.Size = new Size(260, 188);
-            txtBoxDescricaoEdit.TabIndex = 10;
+            txtBoxDescricaoEdit.TabIndex = 11;
             // 
             // label3
             // 
@@ -95,7 +95,7 @@
             label3.Location = new Point(12, 378);
             label3.Name = "label3";
             label3.Size = new Size(83, 18);
-            label3.TabIndex = 11;
+            label3.TabIndex = 12;
             label3.Text = "Criado por: ";
             // 
             // label4
@@ -104,7 +104,7 @@
             label4.Location = new Point(88, 378);
             label4.Name = "label4";
             label4.Size = new Size(49, 18);
-            label4.TabIndex = 12;
+            label4.TabIndex = 13;
             label4.Text = "label4";
             // 
             // btnCancelar
@@ -113,7 +113,7 @@
             btnCancelar.Location = new Point(11, 418);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(75, 23);
-            btnCancelar.TabIndex = 13;
+            btnCancelar.TabIndex = 14;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = true;
             btnCancelar.Click += btnCancelar_Click;
@@ -124,12 +124,12 @@
             btnEditar.Location = new Point(197, 418);
             btnEditar.Name = "btnEditar";
             btnEditar.Size = new Size(75, 23);
-            btnEditar.TabIndex = 14;
+            btnEditar.TabIndex = 15;
             btnEditar.Text = "Editar";
             btnEditar.UseVisualStyleBackColor = true;
             btnEditar.Click += btnEditar_Click;
             // 
-            // FormEditarEntrada
+            // FormEditarSaida
             // 
             AutoScaleDimensions = new SizeF(8F, 18F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -147,10 +147,9 @@
             Font = new Font("Bahnschrift", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Margin = new Padding(3, 4, 3, 4);
-            MaximizeBox = false;
-            Name = "FormEditarEntrada";
+            Name = "FormEditarSaida";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Editar Entrada";
+            Text = "Editar Saida";
             ResumeLayout(false);
             PerformLayout();
         }
