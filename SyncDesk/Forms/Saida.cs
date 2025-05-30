@@ -146,11 +146,11 @@ namespace SyncDesk.SyncDesk.Forms
                     {
                         cmd.Parameters.AddWithValue("id", int.Parse(id));
 
-                        var result = MessageBox.Show("Confirma a exclusão da entrada?", "Atenção!", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+                        var result = MessageBox.Show("Confirma a exclusão da saída?", "Atenção!", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
                         if (result == DialogResult.Yes)
                         {
                             cmd.ExecuteReader();
-                            MessageBox.Show("Entrada removido com sucesso!");
+                            MessageBox.Show("Saída removido com sucesso!");
                             CarregarSaidas();
                             HorarioSelecionado.id = null;
                         }
@@ -161,6 +161,22 @@ namespace SyncDesk.SyncDesk.Forms
                 {
                     MessageBox.Show($"Erro ao excluir saida: {ex.Message}");
                 }
+            }
+        }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
+
+                string valorSaida = row.Cells["Valor da saida"].Value.ToString();
+                string data = Convert.ToDateTime(row.Cells["Data"].Value).ToString("dd/MM/yyyy");
+                string descricao = row.Cells["Descrição"].Value.ToString();
+                string criadoPor = row.Cells["Criado por"].Value.ToString();
+
+                FormVisualizarSaida formVisualizarSaida = new FormVisualizarSaida(valorSaida, data, descricao, criadoPor);
+                formVisualizarSaida.Show();
             }
         }
     }

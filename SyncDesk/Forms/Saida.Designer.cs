@@ -112,6 +112,7 @@
             dataGridView1.Size = new Size(911, 461);
             dataGridView1.TabIndex = 4;
             dataGridView1.CellClick += dataGridView1_CellClick;
+            dataGridView1.CellDoubleClick += dataGridView1_CellDoubleClick;
             // 
             // Saida
             // 
