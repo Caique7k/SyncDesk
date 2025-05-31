@@ -13,13 +13,13 @@ using System.Globalization;
 
 namespace SyncDesk.SyncDesk.Forms
 {
-    public partial class Dashboard: UserControl
+    public partial class Dashboard : UserControl
     {
         public Dashboard()
         {
             InitializeComponent();
             CarregarResumoFinanceiro();
-           
+            CarregarResumoClientes();
             CarregarProximosHorarios();
         }
 
@@ -64,13 +64,13 @@ namespace SyncDesk.SyncDesk.Forms
             lblSaida.Text = totalSaidas.ToString("C2", CultureInfo.GetCultureInfo("pt-BR"));
             lblSaldoAtual.Text = saldo.ToString("C2", CultureInfo.GetCultureInfo("pt-BR"));
 
-            
+
             lblSaldoAtual.ForeColor = saldo < 0 ? Color.Red : Color.Green;
         }
 
         private void CarregarProximosHorarios()
         {
-            
+
 
             string query = @"
         SELECT h.id, h.data_hora, h.hora, h.descricao, c.nome AS cliente
@@ -104,11 +104,40 @@ namespace SyncDesk.SyncDesk.Forms
                         $"às {hora}  " +
                         $"\n{descricao}" +
                         $"\n(Cliente: {cliente})");
-                    
+
                 }
 
                 lblProximosHorarios.Text = sb.ToString();
             }
+        }
+
+        private void CarregarResumoClientes()
+        {
+            int totalClientes = 0;
+            int clientesSemana = 0;
+
+            string queryTotal = "SELECT COUNT(*) FROM clientes;";
+            string querySemana = "SELECT COUNT(*) FROM clientes WHERE criado_em >= date_trunc('week', CURRENT_DATE);";
+
+            using (var conn = Database.GetConnection())
+            {
+                using (var cmdTotal = new NpgsqlCommand(queryTotal, conn))
+                using (var cmdSemana = new NpgsqlCommand(querySemana, conn))
+                {
+                    try
+                    {
+                        totalClientes = Convert.ToInt32(cmdTotal.ExecuteScalar());
+                        clientesSemana = Convert.ToInt32(cmdSemana.ExecuteScalar());
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Erro ao buscar dados de clientes: " + ex.Message);
+                    }
+                }
+            }
+
+            lblTotalClientes.Text = totalClientes.ToString();
+            lblClientesSemana.Text = clientesSemana.ToString();
         }
     }
 }

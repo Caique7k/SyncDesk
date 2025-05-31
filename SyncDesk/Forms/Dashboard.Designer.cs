@@ -38,10 +38,20 @@
             panel2 = new Panel();
             lblProximosHorarios = new Label();
             panel3 = new Panel();
+            panel8 = new Panel();
+            lblTotalClientes = new Label();
+            label6 = new Label();
+            panel7 = new Panel();
+            panel6 = new Panel();
+            lblClientesSemana = new Label();
+            label4 = new Label();
+            panel5 = new Panel();
             panel4 = new Panel();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
+            panel8.SuspendLayout();
+            panel6.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -137,14 +147,92 @@
             // 
             // panel3
             // 
+            panel3.Controls.Add(panel8);
+            panel3.Controls.Add(panel7);
+            panel3.Controls.Add(panel6);
+            panel3.Controls.Add(panel5);
             panel3.Controls.Add(panel4);
             panel3.Controls.Add(panel2);
             panel3.Controls.Add(panel1);
             panel3.Dock = DockStyle.Fill;
             panel3.Location = new Point(0, 0);
             panel3.Name = "panel3";
-            panel3.Size = new Size(864, 574);
+            panel3.Size = new Size(1090, 574);
             panel3.TabIndex = 7;
+            // 
+            // panel8
+            // 
+            panel8.AutoSize = true;
+            panel8.Controls.Add(lblTotalClientes);
+            panel8.Controls.Add(label6);
+            panel8.Location = new Point(466, 71);
+            panel8.Name = "panel8";
+            panel8.Size = new Size(278, 38);
+            panel8.TabIndex = 2;
+            // 
+            // lblTotalClientes
+            // 
+            lblTotalClientes.AutoSize = true;
+            lblTotalClientes.Location = new Point(115, 18);
+            lblTotalClientes.Name = "lblTotalClientes";
+            lblTotalClientes.Size = new Size(48, 18);
+            lblTotalClientes.TabIndex = 1;
+            lblTotalClientes.Text = "label5";
+            lblTotalClientes.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(1, 0);
+            label6.Name = "label6";
+            label6.Size = new Size(260, 18);
+            label6.TabIndex = 0;
+            label6.Text = "Clientes cadastrados durante no total:";
+            // 
+            // panel7
+            // 
+            panel7.Location = new Point(466, 65);
+            panel7.Name = "panel7";
+            panel7.Size = new Size(278, 10);
+            panel7.TabIndex = 3;
+            panel7.Visible = false;
+            // 
+            // panel6
+            // 
+            panel6.AutoSize = true;
+            panel6.Controls.Add(lblClientesSemana);
+            panel6.Controls.Add(label4);
+            panel6.Location = new Point(466, 21);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(278, 53);
+            panel6.TabIndex = 0;
+            // 
+            // lblClientesSemana
+            // 
+            lblClientesSemana.AutoSize = true;
+            lblClientesSemana.Location = new Point(114, 20);
+            lblClientesSemana.Name = "lblClientesSemana";
+            lblClientesSemana.Size = new Size(48, 18);
+            lblClientesSemana.TabIndex = 1;
+            lblClientesSemana.Text = "label5";
+            lblClientesSemana.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(0, 0);
+            label4.Name = "label4";
+            label4.Size = new Size(275, 18);
+            label4.TabIndex = 0;
+            label4.Text = "Clientes cadastrados durante a semana:";
+            // 
+            // panel5
+            // 
+            panel5.Location = new Point(388, 21);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(72, 88);
+            panel5.TabIndex = 2;
+            panel5.Visible = false;
             // 
             // panel4
             // 
@@ -162,13 +250,17 @@
             Font = new Font("Bahnschrift", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Margin = new Padding(3, 4, 3, 4);
             Name = "Dashboard";
-            Size = new Size(864, 574);
+            Size = new Size(1090, 574);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
+            panel8.ResumeLayout(false);
+            panel8.PerformLayout();
+            panel6.ResumeLayout(false);
+            panel6.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -185,5 +277,13 @@
         private Label lblProximosHorarios;
         private Panel panel3;
         private Panel panel4;
+        private Panel panel6;
+        private Label lblClientesSemana;
+        private Label label4;
+        private Panel panel5;
+        private Panel panel8;
+        private Label lblTotalClientes;
+        private Label label6;
+        private Panel panel7;
     }
 }
