@@ -35,22 +35,28 @@
             label2 = new Label();
             lblEntradas = new Label();
             label1 = new Label();
+            panel2 = new Panel();
+            lblProximosHorarios = new Label();
+            panel3 = new Panel();
+            panel4 = new Panel();
             panel1.SuspendLayout();
+            panel2.SuspendLayout();
+            panel3.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.AutoSize = true;
             panel1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            panel1.BackColor = SystemColors.ControlLightLight;
+            panel1.BackColor = SystemColors.Control;
             panel1.Controls.Add(lblSaldoAtual);
             panel1.Controls.Add(label3);
             panel1.Controls.Add(lblSaida);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(lblEntradas);
             panel1.Controls.Add(label1);
-            panel1.Location = new Point(35, 20);
-            panel1.Margin = new Padding(3, 4, 3, 4);
+            panel1.Location = new Point(26, 21);
+            panel1.Margin = new Padding(5, 6, 5, 6);
             panel1.Name = "panel1";
             panel1.Size = new Size(186, 88);
             panel1.TabIndex = 0;
@@ -109,19 +115,61 @@
             label1.TabIndex = 0;
             label1.Text = "Total de entradas:";
             // 
+            // panel2
+            // 
+            panel2.AutoSize = true;
+            panel2.BackColor = SystemColors.Control;
+            panel2.Controls.Add(lblProximosHorarios);
+            panel2.Location = new Point(298, 21);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(84, 88);
+            panel2.TabIndex = 6;
+            // 
+            // lblProximosHorarios
+            // 
+            lblProximosHorarios.AutoSize = true;
+            lblProximosHorarios.Dock = DockStyle.Fill;
+            lblProximosHorarios.Location = new Point(0, 0);
+            lblProximosHorarios.Name = "lblProximosHorarios";
+            lblProximosHorarios.Size = new Size(49, 18);
+            lblProximosHorarios.TabIndex = 0;
+            lblProximosHorarios.Text = "label4";
+            // 
+            // panel3
+            // 
+            panel3.Controls.Add(panel4);
+            panel3.Controls.Add(panel2);
+            panel3.Controls.Add(panel1);
+            panel3.Dock = DockStyle.Fill;
+            panel3.Location = new Point(0, 0);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(864, 574);
+            panel3.TabIndex = 7;
+            // 
+            // panel4
+            // 
+            panel4.Location = new Point(220, 21);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(72, 88);
+            panel4.TabIndex = 1;
+            panel4.Visible = false;
+            // 
             // Dashboard
             // 
             AutoScaleDimensions = new SizeF(8F, 18F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(panel1);
+            Controls.Add(panel3);
             Font = new Font("Bahnschrift", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Margin = new Padding(3, 4, 3, 4);
             Name = "Dashboard";
             Size = new Size(864, 574);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
+            panel3.ResumeLayout(false);
+            panel3.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -133,5 +181,9 @@
         private Label label1;
         private Label lblSaldoAtual;
         private Label label3;
+        private Panel panel2;
+        private Label lblProximosHorarios;
+        private Panel panel3;
+        private Panel panel4;
     }
 }

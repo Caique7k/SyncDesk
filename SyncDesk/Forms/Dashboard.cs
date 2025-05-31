@@ -19,6 +19,8 @@ namespace SyncDesk.SyncDesk.Forms
         {
             InitializeComponent();
             CarregarResumoFinanceiro();
+           
+            CarregarProximosHorarios();
         }
 
 
@@ -64,6 +66,49 @@ namespace SyncDesk.SyncDesk.Forms
 
             
             lblSaldoAtual.ForeColor = saldo < 0 ? Color.Red : Color.Green;
+        }
+
+        private void CarregarProximosHorarios()
+        {
+            
+
+            string query = @"
+        SELECT h.id, h.data_hora, h.hora, h.descricao, c.nome AS cliente
+        FROM horarios h
+        JOIN clientes c ON h.cliente_id = c.id
+        WHERE h.data_hora >= NOW() AND concluido = FALSE
+        ORDER BY h.data_hora ASC
+        ;
+    ";
+
+            using (var conn = Database.GetConnection())
+            using (var cmd = new NpgsqlCommand(query, conn))
+            using (var reader = cmd.ExecuteReader())
+            {
+                if (!reader.HasRows)
+                {
+                    lblProximosHorarios.Text = "Nenhuma tarefa pendente para os próximos dias.";
+                    return;
+                }
+
+                StringBuilder sb = new StringBuilder();
+
+                while (reader.Read())
+                {
+                    DateTime dataHora = Convert.ToDateTime(reader["data_hora"]);
+                    string hora = reader["hora"].ToString();
+                    string descricao = reader["descricao"].ToString();
+                    string cliente = reader["cliente"].ToString();
+
+                    sb.AppendLine($"{dataHora:dd/MM} " +
+                        $"às {hora}  " +
+                        $"\n{descricao}" +
+                        $"\n(Cliente: {cliente})");
+                    
+                }
+
+                lblProximosHorarios.Text = sb.ToString();
+            }
         }
     }
 }
