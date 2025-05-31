@@ -114,7 +114,7 @@ namespace SyncDesk.SyncDesk.Forms
             }
             else
             {
-                MessageBox.Show("Você não tem permissão para acessar!", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Você não tem permissão para acessar este módulo!", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 
