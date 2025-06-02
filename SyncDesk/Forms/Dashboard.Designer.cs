@@ -39,6 +39,8 @@
             panelProximoHorario = new Panel();
             lblProximosHorarios = new Label();
             panel3 = new Panel();
+            panel1 = new Panel();
+            panelGrafico = new Panel();
             PanelConexao = new Panel();
             lblStatusConexao = new Label();
             panel9 = new Panel();
@@ -154,6 +156,8 @@
             // 
             // panel3
             // 
+            panel3.Controls.Add(panel1);
+            panel3.Controls.Add(panelGrafico);
             panel3.Controls.Add(PanelConexao);
             panel3.Controls.Add(panel9);
             panel3.Controls.Add(PanelClientesTotal);
@@ -168,6 +172,20 @@
             panel3.Name = "panel3";
             panel3.Size = new Size(947, 574);
             panel3.TabIndex = 7;
+            // 
+            // panel1
+            // 
+            panel1.Location = new Point(12, 161);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(932, 94);
+            panel1.TabIndex = 0;
+            // 
+            // panelGrafico
+            // 
+            panelGrafico.Location = new Point(8, 261);
+            panelGrafico.Name = "panelGrafico";
+            panelGrafico.Size = new Size(939, 310);
+            panelGrafico.TabIndex = 9;
             // 
             // PanelConexao
             // 
@@ -335,5 +353,7 @@
         private System.Windows.Forms.Timer timerStatusConexao;
         private Panel PanelConexao;
         private Label lblStatusConexao;
+        private Panel panelGrafico;
+        private Panel panel1;
     }
 }

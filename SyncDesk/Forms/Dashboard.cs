@@ -11,6 +11,7 @@ using Npgsql;
 using SyncDesk.Data;
 using System.Globalization;
 using System.Drawing.Drawing2D;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace SyncDesk.SyncDesk.Forms
 {
@@ -22,6 +23,7 @@ namespace SyncDesk.SyncDesk.Forms
             CarregarResumoFinanceiro();
             CarregarResumoClientes();
             CarregarProximosHorarios();
+            CriarGraficoFinanceiro();
             timerStatusConexao.Start();
 
             ArredondarBordas(panelEntradaSaida, 15);
@@ -195,6 +197,76 @@ namespace SyncDesk.SyncDesk.Forms
                 lblStatusConexao.Text = "Status: Erro na conexão";
                 lblStatusConexao.ForeColor = Color.DarkRed;
             }
+        }
+
+        private void CriarGraficoFinanceiro()
+        {
+            Chart chart = new Chart
+            {
+                Width = panelGrafico.Width,
+                Height = panelGrafico.Height,
+                BackColor = Color.White,
+                BorderlineColor = Color.LightGray,
+                BorderlineDashStyle = ChartDashStyle.Solid,
+                Dock = DockStyle.Fill
+            };
+
+            ChartArea area = new ChartArea("AreaPrincipal");
+            area.AxisX.Title = "Dia";
+            area.AxisY.Title = "Valor (R$)";
+            area.AxisX.Interval = 1;
+            area.AxisX.MajorGrid.LineColor = Color.LightGray;
+            area.AxisY.MajorGrid.LineColor = Color.LightGray;
+            chart.ChartAreas.Add(area);
+
+            Series serieEntradas = new Series("Entradas")
+            {
+                ChartType = SeriesChartType.Line,
+                Color = Color.Green,
+                BorderWidth = 2
+            };
+
+            Series serieSaidas = new Series("Saídas")
+            {
+                ChartType = SeriesChartType.Line,
+                Color = Color.Red,
+                BorderWidth = 2
+            };
+
+            string query = @"
+        SELECT 
+            DATE(data_registro) AS dia,
+            SUM(CASE WHEN tipo = 'entrada' THEN valor ELSE 0 END) AS total_entrada,
+            SUM(CASE WHEN tipo = 'saida' THEN valor ELSE 0 END) AS total_saida
+        FROM financeiro
+        WHERE data_registro >= CURRENT_DATE - INTERVAL '6 days'
+        GROUP BY dia
+        ORDER BY dia;
+    ";
+
+            using (var conn = Database.GetConnection())
+            using (var cmd = new NpgsqlCommand(query, conn))
+            using (var reader = cmd.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    DateTime dia = Convert.ToDateTime(reader["dia"]);
+                    decimal entrada = Convert.ToDecimal(reader["total_entrada"]);
+                    decimal saida = Convert.ToDecimal(reader["total_saida"]);
+
+                    string diaStr = dia.ToString("dd/MM");
+
+                    serieEntradas.Points.AddXY(diaStr, entrada);
+                    serieSaidas.Points.AddXY(diaStr, saida);
+                }
+            }
+
+            chart.Series.Add(serieEntradas);
+            chart.Series.Add(serieSaidas);
+            chart.Legends.Add(new Legend("Legenda"));
+
+            panelGrafico.Controls.Clear();
+            panelGrafico.Controls.Add(chart); 
         }
     }
 }
