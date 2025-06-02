@@ -25,6 +25,8 @@ namespace SyncDesk.SyncDesk.Forms
             usuarioTipo = tipo;
             label1.Text = $"Bem vindo, {usuarioNome}";
             this.usuarioId = usuarioId;
+
+            
         }
 
         private void MainForm_Load(object sender, EventArgs e)

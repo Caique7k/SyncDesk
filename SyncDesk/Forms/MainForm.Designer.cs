@@ -364,6 +364,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 16F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoSize = true;
             ClientSize = new Size(1126, 780);
             Controls.Add(panel3);
             Controls.Add(panelContent);
@@ -371,11 +372,9 @@
             Controls.Add(panel1);
             Font = new Font("Bahnschrift", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             FormBorderStyle = FormBorderStyle.FixedDialog;
-            MaximizeBox = false;
             Name = "MainForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "SyncDesk";
-            WindowState = FormWindowState.Maximized;
             Load += MainForm_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();

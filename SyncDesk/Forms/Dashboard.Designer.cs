@@ -71,7 +71,7 @@
             panelEntradaSaida.Controls.Add(label2);
             panelEntradaSaida.Controls.Add(lblEntradas);
             panelEntradaSaida.Controls.Add(label1);
-            panelEntradaSaida.Location = new Point(26, 56);
+            panelEntradaSaida.Location = new Point(26, 67);
             panelEntradaSaida.Margin = new Padding(5, 6, 5, 6);
             panelEntradaSaida.Name = "panelEntradaSaida";
             panelEntradaSaida.Size = new Size(186, 85);
@@ -136,7 +136,7 @@
             panelProximoHorario.AutoSize = true;
             panelProximoHorario.BackColor = SystemColors.ControlLightLight;
             panelProximoHorario.Controls.Add(lblProximosHorarios);
-            panelProximoHorario.Location = new Point(298, 56);
+            panelProximoHorario.Location = new Point(298, 67);
             panelProximoHorario.Name = "panelProximoHorario";
             panelProximoHorario.Size = new Size(84, 88);
             panelProximoHorario.TabIndex = 6;
@@ -166,14 +166,14 @@
             panel3.Dock = DockStyle.Fill;
             panel3.Location = new Point(0, 0);
             panel3.Name = "panel3";
-            panel3.Size = new Size(1090, 574);
+            panel3.Size = new Size(947, 574);
             panel3.TabIndex = 7;
             // 
             // PanelConexao
             // 
             PanelConexao.BackColor = SystemColors.ControlLightLight;
             PanelConexao.Controls.Add(lblStatusConexao);
-            PanelConexao.Location = new Point(765, 66);
+            PanelConexao.Location = new Point(765, 77);
             PanelConexao.Name = "PanelConexao";
             PanelConexao.Size = new Size(154, 78);
             PanelConexao.TabIndex = 8;
@@ -191,7 +191,7 @@
             // 
             panel9.Location = new Point(0, 0);
             panel9.Name = "panel9";
-            panel9.Size = new Size(1090, 47);
+            panel9.Size = new Size(947, 65);
             panel9.TabIndex = 2;
             panel9.Visible = false;
             // 
@@ -201,15 +201,15 @@
             PanelClientesTotal.BackColor = SystemColors.ControlLightLight;
             PanelClientesTotal.Controls.Add(lblTotalClientes);
             PanelClientesTotal.Controls.Add(label6);
-            PanelClientesTotal.Location = new Point(466, 106);
+            PanelClientesTotal.Location = new Point(466, 117);
             PanelClientesTotal.Name = "PanelClientesTotal";
-            PanelClientesTotal.Size = new Size(278, 38);
+            PanelClientesTotal.Size = new Size(278, 43);
             PanelClientesTotal.TabIndex = 2;
             // 
             // lblTotalClientes
             // 
             lblTotalClientes.AutoSize = true;
-            lblTotalClientes.Location = new Point(123, 18);
+            lblTotalClientes.Location = new Point(130, 25);
             lblTotalClientes.Name = "lblTotalClientes";
             lblTotalClientes.Size = new Size(48, 18);
             lblTotalClientes.TabIndex = 1;
@@ -219,7 +219,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(37, 0);
+            label6.Location = new Point(38, 5);
             label6.Name = "label6";
             label6.Size = new Size(205, 18);
             label6.TabIndex = 0;
@@ -228,7 +228,7 @@
             // 
             // panel7
             // 
-            panel7.Location = new Point(466, 100);
+            panel7.Location = new Point(466, 111);
             panel7.Name = "panel7";
             panel7.Size = new Size(278, 10);
             panel7.TabIndex = 3;
@@ -240,7 +240,7 @@
             panelClienteSemana.BackColor = SystemColors.ControlLightLight;
             panelClienteSemana.Controls.Add(lblClientesSemana);
             panelClienteSemana.Controls.Add(label4);
-            panelClienteSemana.Location = new Point(466, 56);
+            panelClienteSemana.Location = new Point(466, 67);
             panelClienteSemana.Name = "panelClienteSemana";
             panelClienteSemana.Size = new Size(278, 44);
             panelClienteSemana.TabIndex = 0;
@@ -248,7 +248,7 @@
             // lblClientesSemana
             // 
             lblClientesSemana.AutoSize = true;
-            lblClientesSemana.Location = new Point(122, 20);
+            lblClientesSemana.Location = new Point(130, 20);
             lblClientesSemana.Name = "lblClientesSemana";
             lblClientesSemana.Size = new Size(48, 18);
             lblClientesSemana.TabIndex = 1;
@@ -267,7 +267,7 @@
             // 
             // panel5
             // 
-            panel5.Location = new Point(388, 56);
+            panel5.Location = new Point(388, 67);
             panel5.Name = "panel5";
             panel5.Size = new Size(72, 88);
             panel5.TabIndex = 2;
@@ -275,7 +275,7 @@
             // 
             // panel4
             // 
-            panel4.Location = new Point(220, 56);
+            panel4.Location = new Point(220, 67);
             panel4.Name = "panel4";
             panel4.Size = new Size(72, 88);
             panel4.TabIndex = 1;
@@ -295,7 +295,7 @@
             Font = new Font("Bahnschrift", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Margin = new Padding(3, 4, 3, 4);
             Name = "Dashboard";
-            Size = new Size(1090, 574);
+            Size = new Size(947, 574);
             panelEntradaSaida.ResumeLayout(false);
             panelEntradaSaida.PerformLayout();
             panelProximoHorario.ResumeLayout(false);

@@ -52,8 +52,8 @@
             // 
             // textBoxemail
             // 
-            textBoxemail.Cursor = Cursors.IBeam;
             resources.ApplyResources(textBoxemail, "textBoxemail");
+            textBoxemail.Cursor = Cursors.IBeam;
             textBoxemail.Name = "textBoxemail";
             // 
             // label2
@@ -64,14 +64,14 @@
             // 
             // textBoxSenha
             // 
-            textBoxSenha.Cursor = Cursors.IBeam;
             resources.ApplyResources(textBoxSenha, "textBoxSenha");
+            textBoxSenha.Cursor = Cursors.IBeam;
             textBoxSenha.Name = "textBoxSenha";
             // 
             // btnLogin
             // 
-            btnLogin.Cursor = Cursors.Hand;
             resources.ApplyResources(btnLogin, "btnLogin");
+            btnLogin.Cursor = Cursors.Hand;
             btnLogin.Name = "btnLogin";
             btnLogin.UseVisualStyleBackColor = true;
             btnLogin.Click += btnLogin_Click;
