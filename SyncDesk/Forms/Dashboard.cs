@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Npgsql;
 using SyncDesk.Data;
 using System.Globalization;
+using System.Drawing.Drawing2D;
 
 namespace SyncDesk.SyncDesk.Forms
 {
@@ -22,8 +23,32 @@ namespace SyncDesk.SyncDesk.Forms
             CarregarResumoClientes();
             CarregarProximosHorarios();
             timerStatusConexao.Start();
+
+            ArredondarBordas(panelEntradaSaida, 15);
+            ArredondarBordas(panelProximoHorario, 15);
+            ArredondarBordas(panelClienteSemana, 15);
+            ArredondarBordas(PanelClientesTotal, 15);
+            ArredondarBordas(PanelConexao, 15);
         }
 
+        public static GraphicsPath GetRoundedRect(Rectangle bounds, int radius) // Função para deixar as  bordas do panel arredondadas
+        {
+            int diameter = radius * 2;
+            var path = new GraphicsPath();
+
+            path.StartFigure();
+            path.AddArc(bounds.X, bounds.Y, diameter, diameter, 180, 90);
+            path.AddArc(bounds.Right - diameter, bounds.Y, diameter, diameter, 270, 90);
+            path.AddArc(bounds.Right - diameter, bounds.Bottom - diameter, diameter, diameter, 0, 90);
+            path.AddArc(bounds.X, bounds.Bottom - diameter, diameter, diameter, 90, 90);
+            path.CloseFigure();
+
+            return path;
+        }
+        private void ArredondarBordas(Panel panel, int radius)
+        {
+            panel.Region = new Region(GetRoundedRect(panel.ClientRectangle, radius));
+        }
 
         private void CarregarResumoFinanceiro()
         {

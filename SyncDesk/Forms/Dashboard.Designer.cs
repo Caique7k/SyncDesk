@@ -29,58 +29,58 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            panel1 = new Panel();
+            panelEntradaSaida = new Panel();
             lblSaldoAtual = new Label();
             label3 = new Label();
             lblSaida = new Label();
             label2 = new Label();
             lblEntradas = new Label();
             label1 = new Label();
-            panel2 = new Panel();
+            panelProximoHorario = new Panel();
             lblProximosHorarios = new Label();
             panel3 = new Panel();
-            panel10 = new Panel();
+            PanelConexao = new Panel();
             lblStatusConexao = new Label();
             panel9 = new Panel();
-            panel8 = new Panel();
+            PanelClientesTotal = new Panel();
             lblTotalClientes = new Label();
             label6 = new Label();
             panel7 = new Panel();
-            panel6 = new Panel();
+            panelClienteSemana = new Panel();
             lblClientesSemana = new Label();
             label4 = new Label();
             panel5 = new Panel();
             panel4 = new Panel();
             timerStatusConexao = new System.Windows.Forms.Timer(components);
-            panel1.SuspendLayout();
-            panel2.SuspendLayout();
+            panelEntradaSaida.SuspendLayout();
+            panelProximoHorario.SuspendLayout();
             panel3.SuspendLayout();
-            panel10.SuspendLayout();
-            panel8.SuspendLayout();
-            panel6.SuspendLayout();
+            PanelConexao.SuspendLayout();
+            PanelClientesTotal.SuspendLayout();
+            panelClienteSemana.SuspendLayout();
             SuspendLayout();
             // 
-            // panel1
+            // panelEntradaSaida
             // 
-            panel1.AutoSize = true;
-            panel1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            panel1.BackColor = SystemColors.Control;
-            panel1.Controls.Add(lblSaldoAtual);
-            panel1.Controls.Add(label3);
-            panel1.Controls.Add(lblSaida);
-            panel1.Controls.Add(label2);
-            panel1.Controls.Add(lblEntradas);
-            panel1.Controls.Add(label1);
-            panel1.Location = new Point(26, 56);
-            panel1.Margin = new Padding(5, 6, 5, 6);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(186, 88);
-            panel1.TabIndex = 0;
+            panelEntradaSaida.AutoSize = true;
+            panelEntradaSaida.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            panelEntradaSaida.BackColor = SystemColors.ControlLightLight;
+            panelEntradaSaida.Controls.Add(lblSaldoAtual);
+            panelEntradaSaida.Controls.Add(label3);
+            panelEntradaSaida.Controls.Add(lblSaida);
+            panelEntradaSaida.Controls.Add(label2);
+            panelEntradaSaida.Controls.Add(lblEntradas);
+            panelEntradaSaida.Controls.Add(label1);
+            panelEntradaSaida.Location = new Point(26, 56);
+            panelEntradaSaida.Margin = new Padding(5, 6, 5, 6);
+            panelEntradaSaida.Name = "panelEntradaSaida";
+            panelEntradaSaida.Size = new Size(186, 85);
+            panelEntradaSaida.TabIndex = 0;
             // 
             // lblSaldoAtual
             // 
             lblSaldoAtual.AutoSize = true;
-            lblSaldoAtual.Location = new Point(134, 70);
+            lblSaldoAtual.Location = new Point(134, 67);
             lblSaldoAtual.Name = "lblSaldoAtual";
             lblSaldoAtual.Size = new Size(49, 18);
             lblSaldoAtual.TabIndex = 5;
@@ -89,7 +89,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(3, 70);
+            label3.Location = new Point(3, 67);
             label3.Name = "label3";
             label3.Size = new Size(85, 18);
             label3.TabIndex = 4;
@@ -131,15 +131,15 @@
             label1.TabIndex = 0;
             label1.Text = "Total de entradas:";
             // 
-            // panel2
+            // panelProximoHorario
             // 
-            panel2.AutoSize = true;
-            panel2.BackColor = SystemColors.Control;
-            panel2.Controls.Add(lblProximosHorarios);
-            panel2.Location = new Point(298, 56);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(84, 88);
-            panel2.TabIndex = 6;
+            panelProximoHorario.AutoSize = true;
+            panelProximoHorario.BackColor = SystemColors.ControlLightLight;
+            panelProximoHorario.Controls.Add(lblProximosHorarios);
+            panelProximoHorario.Location = new Point(298, 56);
+            panelProximoHorario.Name = "panelProximoHorario";
+            panelProximoHorario.Size = new Size(84, 88);
+            panelProximoHorario.TabIndex = 6;
             // 
             // lblProximosHorarios
             // 
@@ -150,37 +150,39 @@
             lblProximosHorarios.Size = new Size(49, 18);
             lblProximosHorarios.TabIndex = 0;
             lblProximosHorarios.Text = "label4";
+            lblProximosHorarios.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // panel3
             // 
-            panel3.Controls.Add(panel10);
+            panel3.Controls.Add(PanelConexao);
             panel3.Controls.Add(panel9);
-            panel3.Controls.Add(panel8);
+            panel3.Controls.Add(PanelClientesTotal);
             panel3.Controls.Add(panel7);
-            panel3.Controls.Add(panel6);
+            panel3.Controls.Add(panelClienteSemana);
             panel3.Controls.Add(panel5);
             panel3.Controls.Add(panel4);
-            panel3.Controls.Add(panel2);
-            panel3.Controls.Add(panel1);
+            panel3.Controls.Add(panelProximoHorario);
+            panel3.Controls.Add(panelEntradaSaida);
             panel3.Dock = DockStyle.Fill;
             panel3.Location = new Point(0, 0);
             panel3.Name = "panel3";
             panel3.Size = new Size(1090, 574);
             panel3.TabIndex = 7;
             // 
-            // panel10
+            // PanelConexao
             // 
-            panel10.Controls.Add(lblStatusConexao);
-            panel10.Location = new Point(750, 66);
-            panel10.Name = "panel10";
-            panel10.Size = new Size(200, 65);
-            panel10.TabIndex = 8;
+            PanelConexao.BackColor = SystemColors.ControlLightLight;
+            PanelConexao.Controls.Add(lblStatusConexao);
+            PanelConexao.Location = new Point(765, 66);
+            PanelConexao.Name = "PanelConexao";
+            PanelConexao.Size = new Size(154, 78);
+            PanelConexao.TabIndex = 8;
             // 
             // lblStatusConexao
             // 
-            lblStatusConexao.Location = new Point(0, 0);
+            lblStatusConexao.Location = new Point(7, 6);
             lblStatusConexao.Name = "lblStatusConexao";
-            lblStatusConexao.Size = new Size(141, 58);
+            lblStatusConexao.Size = new Size(141, 65);
             lblStatusConexao.TabIndex = 7;
             lblStatusConexao.Text = "Status: Verificando...";
             lblStatusConexao.TextAlign = ContentAlignment.MiddleCenter;
@@ -193,20 +195,21 @@
             panel9.TabIndex = 2;
             panel9.Visible = false;
             // 
-            // panel8
+            // PanelClientesTotal
             // 
-            panel8.AutoSize = true;
-            panel8.Controls.Add(lblTotalClientes);
-            panel8.Controls.Add(label6);
-            panel8.Location = new Point(466, 106);
-            panel8.Name = "panel8";
-            panel8.Size = new Size(278, 38);
-            panel8.TabIndex = 2;
+            PanelClientesTotal.AutoSize = true;
+            PanelClientesTotal.BackColor = SystemColors.ControlLightLight;
+            PanelClientesTotal.Controls.Add(lblTotalClientes);
+            PanelClientesTotal.Controls.Add(label6);
+            PanelClientesTotal.Location = new Point(466, 106);
+            PanelClientesTotal.Name = "PanelClientesTotal";
+            PanelClientesTotal.Size = new Size(278, 38);
+            PanelClientesTotal.TabIndex = 2;
             // 
             // lblTotalClientes
             // 
             lblTotalClientes.AutoSize = true;
-            lblTotalClientes.Location = new Point(115, 18);
+            lblTotalClientes.Location = new Point(123, 18);
             lblTotalClientes.Name = "lblTotalClientes";
             lblTotalClientes.Size = new Size(48, 18);
             lblTotalClientes.TabIndex = 1;
@@ -221,6 +224,7 @@
             label6.Size = new Size(205, 18);
             label6.TabIndex = 0;
             label6.Text = "Clientes cadastrados no total:";
+            label6.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // panel7
             // 
@@ -230,20 +234,21 @@
             panel7.TabIndex = 3;
             panel7.Visible = false;
             // 
-            // panel6
+            // panelClienteSemana
             // 
-            panel6.AutoSize = true;
-            panel6.Controls.Add(lblClientesSemana);
-            panel6.Controls.Add(label4);
-            panel6.Location = new Point(466, 56);
-            panel6.Name = "panel6";
-            panel6.Size = new Size(278, 53);
-            panel6.TabIndex = 0;
+            panelClienteSemana.AutoSize = true;
+            panelClienteSemana.BackColor = SystemColors.ControlLightLight;
+            panelClienteSemana.Controls.Add(lblClientesSemana);
+            panelClienteSemana.Controls.Add(label4);
+            panelClienteSemana.Location = new Point(466, 56);
+            panelClienteSemana.Name = "panelClienteSemana";
+            panelClienteSemana.Size = new Size(278, 44);
+            panelClienteSemana.TabIndex = 0;
             // 
             // lblClientesSemana
             // 
             lblClientesSemana.AutoSize = true;
-            lblClientesSemana.Location = new Point(114, 20);
+            lblClientesSemana.Location = new Point(122, 20);
             lblClientesSemana.Name = "lblClientesSemana";
             lblClientesSemana.Size = new Size(48, 18);
             lblClientesSemana.TabIndex = 1;
@@ -253,11 +258,12 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(0, 0);
+            label4.Location = new Point(0, 1);
             label4.Name = "label4";
             label4.Size = new Size(275, 18);
             label4.TabIndex = 0;
             label4.Text = "Clientes cadastrados durante a semana:";
+            label4.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // panel5
             // 
@@ -290,44 +296,44 @@
             Margin = new Padding(3, 4, 3, 4);
             Name = "Dashboard";
             Size = new Size(1090, 574);
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
+            panelEntradaSaida.ResumeLayout(false);
+            panelEntradaSaida.PerformLayout();
+            panelProximoHorario.ResumeLayout(false);
+            panelProximoHorario.PerformLayout();
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
-            panel10.ResumeLayout(false);
-            panel8.ResumeLayout(false);
-            panel8.PerformLayout();
-            panel6.ResumeLayout(false);
-            panel6.PerformLayout();
+            PanelConexao.ResumeLayout(false);
+            PanelClientesTotal.ResumeLayout(false);
+            PanelClientesTotal.PerformLayout();
+            panelClienteSemana.ResumeLayout(false);
+            panelClienteSemana.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Panel panel1;
+        private Panel panelEntradaSaida;
         private Label lblSaida;
         private Label label2;
         private Label lblEntradas;
         private Label label1;
         private Label lblSaldoAtual;
         private Label label3;
-        private Panel panel2;
+        private Panel panelProximoHorario;
         private Label lblProximosHorarios;
         private Panel panel3;
         private Panel panel4;
-        private Panel panel6;
+        private Panel panelClienteSemana;
         private Label lblClientesSemana;
         private Label label4;
         private Panel panel5;
-        private Panel panel8;
+        private Panel PanelClientesTotal;
         private Label lblTotalClientes;
         private Label label6;
         private Panel panel7;
         private Panel panel9;
         private System.Windows.Forms.Timer timerStatusConexao;
-        private Panel panel10;
+        private Panel PanelConexao;
         private Label lblStatusConexao;
     }
 }
