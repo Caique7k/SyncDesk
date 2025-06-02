@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             panel1 = new Panel();
             lblSaldoAtual = new Label();
             label3 = new Label();
@@ -38,6 +39,9 @@
             panel2 = new Panel();
             lblProximosHorarios = new Label();
             panel3 = new Panel();
+            panel10 = new Panel();
+            lblStatusConexao = new Label();
+            panel9 = new Panel();
             panel8 = new Panel();
             lblTotalClientes = new Label();
             label6 = new Label();
@@ -47,9 +51,11 @@
             label4 = new Label();
             panel5 = new Panel();
             panel4 = new Panel();
+            timerStatusConexao = new System.Windows.Forms.Timer(components);
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
+            panel10.SuspendLayout();
             panel8.SuspendLayout();
             panel6.SuspendLayout();
             SuspendLayout();
@@ -65,7 +71,7 @@
             panel1.Controls.Add(label2);
             panel1.Controls.Add(lblEntradas);
             panel1.Controls.Add(label1);
-            panel1.Location = new Point(26, 21);
+            panel1.Location = new Point(26, 56);
             panel1.Margin = new Padding(5, 6, 5, 6);
             panel1.Name = "panel1";
             panel1.Size = new Size(186, 88);
@@ -130,7 +136,7 @@
             panel2.AutoSize = true;
             panel2.BackColor = SystemColors.Control;
             panel2.Controls.Add(lblProximosHorarios);
-            panel2.Location = new Point(298, 21);
+            panel2.Location = new Point(298, 56);
             panel2.Name = "panel2";
             panel2.Size = new Size(84, 88);
             panel2.TabIndex = 6;
@@ -147,6 +153,8 @@
             // 
             // panel3
             // 
+            panel3.Controls.Add(panel10);
+            panel3.Controls.Add(panel9);
             panel3.Controls.Add(panel8);
             panel3.Controls.Add(panel7);
             panel3.Controls.Add(panel6);
@@ -160,12 +168,37 @@
             panel3.Size = new Size(1090, 574);
             panel3.TabIndex = 7;
             // 
+            // panel10
+            // 
+            panel10.Controls.Add(lblStatusConexao);
+            panel10.Location = new Point(750, 66);
+            panel10.Name = "panel10";
+            panel10.Size = new Size(200, 65);
+            panel10.TabIndex = 8;
+            // 
+            // lblStatusConexao
+            // 
+            lblStatusConexao.Location = new Point(0, 0);
+            lblStatusConexao.Name = "lblStatusConexao";
+            lblStatusConexao.Size = new Size(141, 58);
+            lblStatusConexao.TabIndex = 7;
+            lblStatusConexao.Text = "Status: Verificando...";
+            lblStatusConexao.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // panel9
+            // 
+            panel9.Location = new Point(0, 0);
+            panel9.Name = "panel9";
+            panel9.Size = new Size(1090, 47);
+            panel9.TabIndex = 2;
+            panel9.Visible = false;
+            // 
             // panel8
             // 
             panel8.AutoSize = true;
             panel8.Controls.Add(lblTotalClientes);
             panel8.Controls.Add(label6);
-            panel8.Location = new Point(466, 71);
+            panel8.Location = new Point(466, 106);
             panel8.Name = "panel8";
             panel8.Size = new Size(278, 38);
             panel8.TabIndex = 2;
@@ -183,15 +216,15 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(1, 0);
+            label6.Location = new Point(37, 0);
             label6.Name = "label6";
-            label6.Size = new Size(260, 18);
+            label6.Size = new Size(205, 18);
             label6.TabIndex = 0;
-            label6.Text = "Clientes cadastrados durante no total:";
+            label6.Text = "Clientes cadastrados no total:";
             // 
             // panel7
             // 
-            panel7.Location = new Point(466, 65);
+            panel7.Location = new Point(466, 100);
             panel7.Name = "panel7";
             panel7.Size = new Size(278, 10);
             panel7.TabIndex = 3;
@@ -202,7 +235,7 @@
             panel6.AutoSize = true;
             panel6.Controls.Add(lblClientesSemana);
             panel6.Controls.Add(label4);
-            panel6.Location = new Point(466, 21);
+            panel6.Location = new Point(466, 56);
             panel6.Name = "panel6";
             panel6.Size = new Size(278, 53);
             panel6.TabIndex = 0;
@@ -228,7 +261,7 @@
             // 
             // panel5
             // 
-            panel5.Location = new Point(388, 21);
+            panel5.Location = new Point(388, 56);
             panel5.Name = "panel5";
             panel5.Size = new Size(72, 88);
             panel5.TabIndex = 2;
@@ -236,11 +269,17 @@
             // 
             // panel4
             // 
-            panel4.Location = new Point(220, 21);
+            panel4.Location = new Point(220, 56);
             panel4.Name = "panel4";
             panel4.Size = new Size(72, 88);
             panel4.TabIndex = 1;
             panel4.Visible = false;
+            // 
+            // timerStatusConexao
+            // 
+            timerStatusConexao.Enabled = true;
+            timerStatusConexao.Interval = 10000;
+            timerStatusConexao.Tick += timerStatusConexao_Tick;
             // 
             // Dashboard
             // 
@@ -257,6 +296,7 @@
             panel2.PerformLayout();
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
+            panel10.ResumeLayout(false);
             panel8.ResumeLayout(false);
             panel8.PerformLayout();
             panel6.ResumeLayout(false);
@@ -285,5 +325,9 @@
         private Label lblTotalClientes;
         private Label label6;
         private Panel panel7;
+        private Panel panel9;
+        private System.Windows.Forms.Timer timerStatusConexao;
+        private Panel panel10;
+        private Label lblStatusConexao;
     }
 }

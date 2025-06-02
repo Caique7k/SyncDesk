@@ -21,6 +21,7 @@ namespace SyncDesk.SyncDesk.Forms
             CarregarResumoFinanceiro();
             CarregarResumoClientes();
             CarregarProximosHorarios();
+            timerStatusConexao.Start();
         }
 
 
@@ -76,8 +77,9 @@ namespace SyncDesk.SyncDesk.Forms
         SELECT h.id, h.data_hora, h.hora, h.descricao, c.nome AS cliente
         FROM horarios h
         JOIN clientes c ON h.cliente_id = c.id
-        WHERE h.data_hora >= NOW() AND concluido = FALSE
+        WHERE h.data_hora >= NOW()
         ORDER BY h.data_hora ASC
+        LIMIT 1
         ;
     ";
 
@@ -138,6 +140,36 @@ namespace SyncDesk.SyncDesk.Forms
 
             lblTotalClientes.Text = totalClientes.ToString();
             lblClientesSemana.Text = clientesSemana.ToString();
+        }
+
+        private void timerStatusConexao_Tick(object sender, EventArgs e)
+        {
+            VerificarStatusConexao();
+        }
+
+        private void VerificarStatusConexao()
+        {
+            try
+            {
+                using (var conn = Database.GetConnection())
+                {
+                    if (conn.State == ConnectionState.Open)
+                    {
+                        lblStatusConexao.Text = "Status: Conectado ao banco de dados! ✅";
+                        lblStatusConexao.ForeColor = Color.Green;
+                    }
+                    else
+                    {
+                        lblStatusConexao.Text = "Status: Desconectado do banco de dados! ";
+                        lblStatusConexao.ForeColor = Color.Red;
+                    }
+                }
+            }
+            catch
+            {
+                lblStatusConexao.Text = "Status: Erro na conexão";
+                lblStatusConexao.ForeColor = Color.DarkRed;
+            }
         }
     }
 }
