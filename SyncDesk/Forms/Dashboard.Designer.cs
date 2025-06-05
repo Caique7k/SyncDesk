@@ -65,7 +65,6 @@
             // panelEntradaSaida
             // 
             panelEntradaSaida.AutoSize = true;
-            panelEntradaSaida.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             panelEntradaSaida.BackColor = SystemColors.ControlLightLight;
             panelEntradaSaida.Controls.Add(lblSaldoAtual);
             panelEntradaSaida.Controls.Add(label3);
@@ -73,16 +72,16 @@
             panelEntradaSaida.Controls.Add(label2);
             panelEntradaSaida.Controls.Add(lblEntradas);
             panelEntradaSaida.Controls.Add(label1);
-            panelEntradaSaida.Location = new Point(26, 67);
+            panelEntradaSaida.Location = new Point(27, 68);
             panelEntradaSaida.Margin = new Padding(5, 6, 5, 6);
             panelEntradaSaida.Name = "panelEntradaSaida";
-            panelEntradaSaida.Size = new Size(186, 85);
+            panelEntradaSaida.Size = new Size(185, 84);
             panelEntradaSaida.TabIndex = 0;
             // 
             // lblSaldoAtual
             // 
             lblSaldoAtual.AutoSize = true;
-            lblSaldoAtual.Location = new Point(134, 67);
+            lblSaldoAtual.Location = new Point(133, 60);
             lblSaldoAtual.Name = "lblSaldoAtual";
             lblSaldoAtual.Size = new Size(49, 18);
             lblSaldoAtual.TabIndex = 5;
@@ -91,7 +90,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(3, 67);
+            label3.Location = new Point(3, 60);
             label3.Name = "label3";
             label3.Size = new Size(85, 18);
             label3.TabIndex = 4;
@@ -100,7 +99,7 @@
             // lblSaida
             // 
             lblSaida.AutoSize = true;
-            lblSaida.Location = new Point(134, 41);
+            lblSaida.Location = new Point(134, 37);
             lblSaida.Name = "lblSaida";
             lblSaida.Size = new Size(48, 18);
             lblSaida.TabIndex = 3;
@@ -109,7 +108,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(3, 41);
+            label2.Location = new Point(3, 36);
             label2.Name = "label2";
             label2.Size = new Size(114, 18);
             label2.TabIndex = 2;
@@ -138,9 +137,9 @@
             panelProximoHorario.AutoSize = true;
             panelProximoHorario.BackColor = SystemColors.ControlLightLight;
             panelProximoHorario.Controls.Add(lblProximosHorarios);
-            panelProximoHorario.Location = new Point(298, 67);
+            panelProximoHorario.Location = new Point(298, 68);
             panelProximoHorario.Name = "panelProximoHorario";
-            panelProximoHorario.Size = new Size(84, 88);
+            panelProximoHorario.Size = new Size(84, 78);
             panelProximoHorario.TabIndex = 6;
             // 
             // lblProximosHorarios

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             label1 = new Label();
             panel1 = new Panel();
@@ -54,6 +55,12 @@
             pictureBox2 = new PictureBox();
             panelContent = new Panel();
             panel3 = new Panel();
+            panel6 = new Panel();
+            mostraHora = new Label();
+            panel5 = new Panel();
+            btnGerarPdf = new Button();
+            saveFileDialog1 = new SaveFileDialog();
+            timer1 = new System.Windows.Forms.Timer(components);
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureUsuario).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureSaida).BeginInit();
@@ -67,14 +74,18 @@
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel3.SuspendLayout();
+            panel6.SuspendLayout();
+            panel5.SuspendLayout();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(6, 0);
+            label1.Dock = DockStyle.Fill;
+            label1.Font = new Font("Bahnschrift", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(0, 0);
             label1.Name = "label1";
-            label1.Size = new Size(40, 16);
+            label1.Size = new Size(45, 18);
             label1.TabIndex = 0;
             label1.Text = "label1";
             // 
@@ -353,12 +364,58 @@
             // 
             // panel3
             // 
-            panel3.Controls.Add(label1);
+            panel3.Controls.Add(panel6);
+            panel3.Controls.Add(panel5);
+            panel3.Controls.Add(btnGerarPdf);
             panel3.Dock = DockStyle.Bottom;
-            panel3.Location = new Point(173, 755);
+            panel3.Location = new Point(173, 736);
             panel3.Name = "panel3";
-            panel3.Size = new Size(953, 25);
+            panel3.Size = new Size(953, 44);
             panel3.TabIndex = 0;
+            // 
+            // panel6
+            // 
+            panel6.AutoSize = true;
+            panel6.Controls.Add(mostraHora);
+            panel6.Location = new Point(200, 14);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(200, 18);
+            panel6.TabIndex = 5;
+            // 
+            // mostraHora
+            // 
+            mostraHora.AutoSize = true;
+            mostraHora.Dock = DockStyle.Fill;
+            mostraHora.Font = new Font("Bahnschrift", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            mostraHora.Location = new Point(0, 0);
+            mostraHora.Name = "mostraHora";
+            mostraHora.Size = new Size(48, 18);
+            mostraHora.TabIndex = 2;
+            mostraHora.Text = "label5";
+            // 
+            // panel5
+            // 
+            panel5.AutoSize = true;
+            panel5.Controls.Add(label1);
+            panel5.Location = new Point(3, 14);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(181, 18);
+            panel5.TabIndex = 4;
+            // 
+            // btnGerarPdf
+            // 
+            btnGerarPdf.Cursor = Cursors.Hand;
+            btnGerarPdf.Location = new Point(818, 6);
+            btnGerarPdf.Name = "btnGerarPdf";
+            btnGerarPdf.Size = new Size(123, 29);
+            btnGerarPdf.TabIndex = 1;
+            btnGerarPdf.Text = "Gerar Relátorio";
+            btnGerarPdf.UseVisualStyleBackColor = true;
+            btnGerarPdf.Click += btnGerarPdf_Click;
+            // 
+            // timer1
+            // 
+            timer1.Tick += timer1_Tick;
             // 
             // MainForm
             // 
@@ -392,6 +449,10 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
+            panel6.ResumeLayout(false);
+            panel6.PerformLayout();
+            panel5.ResumeLayout(false);
+            panel5.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -422,5 +483,11 @@
         private Panel panel3;
         private Label Utilitários;
         private Panel panel4;
+        private Button btnGerarPdf;
+        private SaveFileDialog saveFileDialog1;
+        private Label mostraHora;
+        private System.Windows.Forms.Timer timer1;
+        private Panel panel6;
+        private Panel panel5;
     }
 }
