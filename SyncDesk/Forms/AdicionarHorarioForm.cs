@@ -98,7 +98,13 @@ namespace SyncDesk.SyncDesk.Forms
             DateTime dataHorario = dateTimePicker1.Value.Date;
             string horario = maskedTextBoxHorario.Text;
 
-            bool horarioValido = TimeSpan.TryParse(horario, out TimeSpan horarioConvertido); // tryparse ajuda a não salvar o ":" no banco de dados quando o mesmo é vazio na aplicação
+            bool horarioValido = TimeSpan.TryParseExact(horario, @"hh\:mm", null, out TimeSpan horarioConvertido);
+
+            if (!horarioValido || horarioConvertido.TotalHours >= 24 || horarioConvertido.TotalMinutes < 0)
+            {
+                MessageBox.Show("Informe um horário válido entre 00:00 e 23:59.", "Horário inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
             if (string.IsNullOrWhiteSpace(descricao) || !horarioValido)
             {
