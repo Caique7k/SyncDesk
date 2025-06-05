@@ -118,196 +118,11 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        AAABAAEAEyAAAAEAIAAoCgAAFgAAACgAAAATAAAAQAAAAAEAIAAAAAAAgAkAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAMPDwwDFxcUAw8PDDsXFxXbFxcXZxcXFd8PDww/FxcUAwsLCAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAvb29AMTExAD///8AxMTENcXFxazGxsb3xsbG/8bG
-        xvjFxcWtxMTENgAAAADExMQAvLy8AAAAAAAAAAAAAAAAAAAAAAAAAAAAxsbGAMfHxwDDw8MTxcXFd8bG
-        xuPGxsb/xsbG/8bGxv/Gxsb/xsbG/8bGxuTFxcV4xMTEFJKSkgBzc3MAAAAAAAAAAADGxsYAxsbGAMbG
-        xgLFxcVBxcXFvMbGxvzGxsb/xsbG/8bGxv/Gxsb/xsbG/8bGxv/Gxsb/xsbG/cTExL2kpKRCLi4uAqur
-        qwCqqqoAxsbGAMbGxhjGxsaCxsbG6sbGxv/Gxsb/xsbG/8bGxv/Gxsb/xsbG/8bGxv/Gxsb/x8fH/76+
-        vv+dnZ3/fn5+64mJiYaqqqoaqqqqAMbGxlXGxsbExsbG/sbGxv/Gxsb/xsbG/8bGxv/Gxsb/xsbG/8bG
-        xv/Hx8f/xcXF/66urv+IiIj/fHx8/5GRkf+lpaX/qqqqxqqqqlfGxsb2xsbG/8bGxv/Gxsb/xsbG/8bG
-        xv/Gxsb/xsbG/8bGxv/Gxsb/u7u7/5iYmP98fHz/hYWF/5+fn/+qqqr/qqqq/6qqqv+qqqr3xsbG/8bG
-        xv/Gxsb/xsbG/8bGxv/Gxsb/xsbG/8bGxv/Hx8f1tra2zYWFhfV9fX3/lJSU/6enp/+rq6v/qqqq/6qq
-        qv+qqqr/qqqq/8bGxv/Gxsb/xsbG/8bGxv/Gxsb/xsbG/8bGxv/GxsbSxsbGW5mZmRV9fX1bn5+f0aur
-        q/+qqqr/qqqq/6qqqv+qqqr/qqqq/6qqqv/Gxsb/xsbG/8bGxv/Gxsb/xsbG/8bGxvDGxsaTxsbGIsfH
-        xwCfn58AWlpaALCwsB+lpaWdp6en+6urq/+qqqr/qqqq/6qqqv+qqqr/xsbG/8bGxv/Gxsb/xsbG/sbG
-        xsbGxsZNxsbGBcbGxgC+vr4AlpaWAJiYmACGhoY3bm5utXx8fPybm5v/qqqq/6qqqv+qqqr/qqqq/8bG
-        xv/Gxsb/xsbG6cbGxoPGxsYZxsbGAMbGxgCWlpYAlpaWAJaWlhWWlpZ7lZWV5oiIiP9ycnL/b29v/4qK
-        iv+lpaX/q6ur/6qqqv/Gxsb7xsbGucbGxj/GxsYCxsbGAKioqACWlpYAlpaWA5aWlkaWlpa/lpaW/ZaW
-        lv+Xl5f/kpKS/39/f/9tbW3/eHh4/5iYmP+pqan/xsbGZ8bGxhLGxsYAxsbGAJaWlgCWlpYAlpaWHZaW
-        louWlpbtlpaW/5aWlv+Wlpb/lpaW/5aWlv+Wlpb/i4uL/3V1df9ubm7/hYWF6sbGxgDGxsYAmZmZAJaW
-        lgCWlpYGlpaWVJaWlsyWlpb/lpaW/5aWlv+Wlpb/lpaW/5aWlv+Wlpb/lpaW/5eXl/+Tk5P4fX19qmZm
-        ZjrExMQAlpaWAJaWlgCWlpYnlpaWmpaWlvOWlpb/lpaW/5aWlv+Wlpb/lpaW/5aWlv+Wlpb/lpaW/5aW
-        lv+WlpbXlpaWY6SkpAtpaWkAlpaWAJaWlguWlpZjlpaW15aWlv+Wlpb/lpaW/5aWlv+Wlpb/lpaW/5aW
-        lv+Wlpb/lpaW/5aWlvOWlpablpaWJ5aWlgCWlpYAaGhoAJaWljiWlpaolpaW+JaWlv+Wlpb/lpaW/5aW
-        lv+Wlpb/lpaW/5aWlv+Wlpb/lpaW/5aWlsyWlpZUlpaWB5aWlgCTk5MAZmZmAGZmZgCWlpbplpaW/5aW
-        lv+Wlpb/lpaW/5aWlv+Wlpb/lpaW/5aWlv+Wlpb/lpaW7ZaWlouWlpYdlpaWAJaWlgBmZmYAZmZmAGZm
-        ZhJmZmZmlpaW/5aWlv+Wlpb/lpaW/5aWlv+Wlpb/lpaW/5aWlv+Wlpb9lpaWv5aWlkaWlpYDlpaWAIWF
-        hQBmZmYAZmZmAWZmZj5mZma4ZmZm+5aWlv+Wlpb/lpaW/5aWlv+Wlpb/lpaW/5aWlv+WlpbllpaWe5aW
-        lhWWlpYAlpaWAGZmZgBmZmYAZmZmGGZmZoJmZmbpZmZm/2ZmZv+Wlpb/lpaW/5aWlv+Wlpb/l5eX/5WV
-        lfyVlZW0l5eXN5mZmQCWlpYAbm5uAGZmZgBmZmYEZmZmTGZmZsVmZmb+ZmZm/2ZmZv9mZmb/lpaW/5aW
-        lv+Wlpb/l5eX/46Ojv9xcXH7XV1dn2hoaCB/f38AYmJiADQ0NABoaGgiZmZmkmZmZvBmZmb/ZmZm/2Zm
-        Zv9mZmb/ZmZm/5aWlv+Xl5f/lJSU/39/f/9hYWH/W1tb/2xsbP96enrSfHx8XF5eXhVLS0tbX19f0WZm
-        Zv9mZmb/ZmZm/2ZmZv9mZmb/ZmZm/2ZmZv+Wlpb/i4uL/21tbf9aWlr/ZGRk/3Z2dv98fHz/fHx8/3x8
-        fPVxcXHNUVFR9UxMTP9ZWVn/ZGRk/2ZmZv9mZmb/ZmZm/2ZmZv9mZmb/enp6919fX/9dXV3/b29v/3t7
-        e/98fHz/fHx8/3x8fP98fHz/fHx8/3V1df9eXl7/S0tL/1BQUP9fX1//ZmZm/2ZmZv9mZmb/ZmZm9ldX
-        V1ZjY2PFd3d3/nx8fP98fHz/fHx8/3x8fP98fHz/fHx8/3x8fP98fHz/e3t7/2xsbP9TU1P/S0tL/1dX
-        V/9jY2P+ZmZmxWZmZlZbW1sAf39/GH19fYJ8fHzqfHx8/3x8fP98fHz/fHx8/3x8fP98fHz/fHx8/3x8
-        fP99fX3/d3d3/2FhYf9MTEzrUlJShGZmZhlmZmYAW1tbAHt7ewB8fHwCe3t7QXx8fLx8fHz8fHx8/3x8
-        fP98fHz/fHx8/3x8fP98fHz/fHx8/3x8fP17e3u9ZmZmQhMTEwJnZ2cAZmZmAAAAAAAAAAAAfHx8AH19
-        fQB6enoTe3t7d3x8fON8fHz/fHx8/3x8fP98fHz/fHx8/3x8fOR7e3t4e3t7FFlZWQBEREQAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAB0dHQAenp6AP///wB7e3s1fHx8rHx8fPd8fHz/fHx8+Hx8fK17e3s2AAAAAHt7
-        ewB2dnYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB5eXkAe3t7AHp6eg57e3t2fHx82Xt7
-        e3d6enoPe3t7AHl5eQAAAAAAAAAAAAAAAAAAAAAAAAAAAP4P4AD8B+AA8AHgAMAAYACAACAAAAAAAAAA
-        AAAAAAAAAAAAAADgAAAB4AAAB4AAAA4AAAA8AAAA8AAAAOAAIACAAOAAAAHgAAAHgAAADgAAADwAAADw
-        AAAA4AAAAAAAAAAAAAAAAAAAAAAAAIAAIADAAGAA8AHgAPwH4AD+D+AA
-</value>
-  </data>
-  <data name="textBoxemail.Size" type="System.Drawing.Size, System.Drawing">
-    <value>216, 21</value>
-  </data>
-  <data name="&gt;&gt;textBoxSenha.Name" xml:space="preserve">
-    <value>textBoxSenha</value>
-  </data>
-  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;textBoxemail.Name" xml:space="preserve">
-    <value>textBoxemail</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="label2.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;label2.Name" xml:space="preserve">
-    <value>label2</value>
-  </data>
-  <data name="&gt;&gt;btnLogin.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnLogin.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;textBoxemail.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textBoxSenha.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;btnLogin.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;textBoxemail.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="textBoxSenha.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="label1.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="textBoxSenha.Location" type="System.Drawing.Point, System.Drawing">
-    <value>436, 193</value>
-  </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>Digite seu email</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>SyncDesk - Login</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="pictureBox1.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>CenterImage</value>
-  </data>
-  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>103, 14</value>
-  </data>
-  <data name="&gt;&gt;textBoxemail.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="btnLogin.Size" type="System.Drawing.Size, System.Drawing">
-    <value>98, 35</value>
-  </data>
-  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>493, 176</value>
-  </data>
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>99, 14</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Name" xml:space="preserve">
-    <value>pictureBox1</value>
-  </data>
-  <data name="&gt;&gt;textBoxSenha.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>8, 14</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>691, 366</value>
-  </data>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
-  </data>
-  <data name="textBoxemail.Location" type="System.Drawing.Point, System.Drawing">
-    <value>436, 112</value>
-  </data>
-  <data name="&gt;&gt;label2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="textBoxemail.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
   <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial Rounded MT Bold, 9pt</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>-6, -5</value>
-  </data>
-  <data name="textBoxSenha.Size" type="System.Drawing.Size, System.Drawing">
-    <value>216, 21</value>
-  </data>
-  <data name="&gt;&gt;textBoxSenha.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>Digite sua senha</value>
-  </data>
-  <data name="btnLogin.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;btnLogin.Name" xml:space="preserve">
-    <value>btnLogin</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>LoginForm</value>
-  </data>
-  <data name="btnLogin.Location" type="System.Drawing.Point, System.Drawing">
-    <value>493, 265</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="pictureBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Digite seu email</value>
   </data>
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -709,31 +524,216 @@
         AIPkAQUAgPHKH/3/WD0phbvll2sAAAAASUVORK5CYII=
 </value>
   </data>
+  <data name="&gt;&gt;pictureBox1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;textBoxemail.Name" xml:space="preserve">
+    <value>textBoxemail</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>493, 176</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>493, 95</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>691, 366</value>
+  </data>
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="textBoxSenha.Location" type="System.Drawing.Point, System.Drawing">
+    <value>436, 193</value>
+  </data>
+  <data name="textBoxemail.Size" type="System.Drawing.Size, System.Drawing">
+    <value>216, 21</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;textBoxSenha.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>LoginForm</value>
+  </data>
+  <data name="&gt;&gt;textBoxemail.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="btnLogin.Location" type="System.Drawing.Point, System.Drawing">
+    <value>493, 265</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>SyncDesk - Login</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxemail.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>99, 14</value>
+  </data>
+  <data name="textBoxSenha.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="btnLogin.Text" xml:space="preserve">
+    <value>Entrar</value>
+  </data>
+  <data name="&gt;&gt;btnLogin.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="pictureBox1.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>CenterImage</value>
+  </data>
+  <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>-6, -5</value>
+  </data>
+  <data name="btnLogin.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;textBoxSenha.Name" xml:space="preserve">
+    <value>textBoxSenha</value>
+  </data>
+  <data name="textBoxemail.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnLogin.Name" xml:space="preserve">
+    <value>btnLogin</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>8, 14</value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="textBoxemail.Location" type="System.Drawing.Point, System.Drawing">
+    <value>436, 112</value>
+  </data>
+  <data name="textBoxSenha.Size" type="System.Drawing.Size, System.Drawing">
+    <value>216, 21</value>
+  </data>
+  <data name="&gt;&gt;btnLogin.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="btnLogin.Size" type="System.Drawing.Size, System.Drawing">
+    <value>98, 35</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Digite sua senha</value>
+  </data>
   <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
     <value>791, 486</value>
   </data>
-  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;textBoxSenha.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
-  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="&gt;&gt;textBoxemail.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
-  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>493, 95</value>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
   </data>
-  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>103, 14</value>
   </data>
-  <data name="btnLogin.Text" xml:space="preserve">
-    <value>Entrar</value>
+  <data name="&gt;&gt;textBoxSenha.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAEyAAAAEAIAAoCgAAFgAAACgAAAATAAAAQAAAAAEAIAAAAAAAgAkAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAMPDwwDFxcUAw8PDDsXFxXbFxcXZxcXFd8PDww/FxcUAwsLCAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAvb29AMTExAD///8AxMTENcXFxazGxsb3xsbG/8bG
+        xvjFxcWtxMTENgAAAADExMQAvLy8AAAAAAAAAAAAAAAAAAAAAAAAAAAAxsbGAMfHxwDDw8MTxcXFd8bG
+        xuPGxsb/xsbG/8bGxv/Gxsb/xsbG/8bGxuTFxcV4xMTEFJKSkgBzc3MAAAAAAAAAAADGxsYAxsbGAMbG
+        xgLFxcVBxcXFvMbGxvzGxsb/xsbG/8bGxv/Gxsb/xsbG/8bGxv/Gxsb/xsbG/cTExL2kpKRCLi4uAqur
+        qwCqqqoAxsbGAMbGxhjGxsaCxsbG6sbGxv/Gxsb/xsbG/8bGxv/Gxsb/xsbG/8bGxv/Gxsb/x8fH/76+
+        vv+dnZ3/fn5+64mJiYaqqqoaqqqqAMbGxlXGxsbExsbG/sbGxv/Gxsb/xsbG/8bGxv/Gxsb/xsbG/8bG
+        xv/Hx8f/xcXF/66urv+IiIj/fHx8/5GRkf+lpaX/qqqqxqqqqlfGxsb2xsbG/8bGxv/Gxsb/xsbG/8bG
+        xv/Gxsb/xsbG/8bGxv/Gxsb/u7u7/5iYmP98fHz/hYWF/5+fn/+qqqr/qqqq/6qqqv+qqqr3xsbG/8bG
+        xv/Gxsb/xsbG/8bGxv/Gxsb/xsbG/8bGxv/Hx8f1tra2zYWFhfV9fX3/lJSU/6enp/+rq6v/qqqq/6qq
+        qv+qqqr/qqqq/8bGxv/Gxsb/xsbG/8bGxv/Gxsb/xsbG/8bGxv/GxsbSxsbGW5mZmRV9fX1bn5+f0aur
+        q/+qqqr/qqqq/6qqqv+qqqr/qqqq/6qqqv/Gxsb/xsbG/8bGxv/Gxsb/xsbG/8bGxvDGxsaTxsbGIsfH
+        xwCfn58AWlpaALCwsB+lpaWdp6en+6urq/+qqqr/qqqq/6qqqv+qqqr/xsbG/8bGxv/Gxsb/xsbG/sbG
+        xsbGxsZNxsbGBcbGxgC+vr4AlpaWAJiYmACGhoY3bm5utXx8fPybm5v/qqqq/6qqqv+qqqr/qqqq/8bG
+        xv/Gxsb/xsbG6cbGxoPGxsYZxsbGAMbGxgCWlpYAlpaWAJaWlhWWlpZ7lZWV5oiIiP9ycnL/b29v/4qK
+        iv+lpaX/q6ur/6qqqv/Gxsb7xsbGucbGxj/GxsYCxsbGAKioqACWlpYAlpaWA5aWlkaWlpa/lpaW/ZaW
+        lv+Xl5f/kpKS/39/f/9tbW3/eHh4/5iYmP+pqan/xsbGZ8bGxhLGxsYAxsbGAJaWlgCWlpYAlpaWHZaW
+        louWlpbtlpaW/5aWlv+Wlpb/lpaW/5aWlv+Wlpb/i4uL/3V1df9ubm7/hYWF6sbGxgDGxsYAmZmZAJaW
+        lgCWlpYGlpaWVJaWlsyWlpb/lpaW/5aWlv+Wlpb/lpaW/5aWlv+Wlpb/lpaW/5eXl/+Tk5P4fX19qmZm
+        ZjrExMQAlpaWAJaWlgCWlpYnlpaWmpaWlvOWlpb/lpaW/5aWlv+Wlpb/lpaW/5aWlv+Wlpb/lpaW/5aW
+        lv+WlpbXlpaWY6SkpAtpaWkAlpaWAJaWlguWlpZjlpaW15aWlv+Wlpb/lpaW/5aWlv+Wlpb/lpaW/5aW
+        lv+Wlpb/lpaW/5aWlvOWlpablpaWJ5aWlgCWlpYAaGhoAJaWljiWlpaolpaW+JaWlv+Wlpb/lpaW/5aW
+        lv+Wlpb/lpaW/5aWlv+Wlpb/lpaW/5aWlsyWlpZUlpaWB5aWlgCTk5MAZmZmAGZmZgCWlpbplpaW/5aW
+        lv+Wlpb/lpaW/5aWlv+Wlpb/lpaW/5aWlv+Wlpb/lpaW7ZaWlouWlpYdlpaWAJaWlgBmZmYAZmZmAGZm
+        ZhJmZmZmlpaW/5aWlv+Wlpb/lpaW/5aWlv+Wlpb/lpaW/5aWlv+Wlpb9lpaWv5aWlkaWlpYDlpaWAIWF
+        hQBmZmYAZmZmAWZmZj5mZma4ZmZm+5aWlv+Wlpb/lpaW/5aWlv+Wlpb/lpaW/5aWlv+WlpbllpaWe5aW
+        lhWWlpYAlpaWAGZmZgBmZmYAZmZmGGZmZoJmZmbpZmZm/2ZmZv+Wlpb/lpaW/5aWlv+Wlpb/l5eX/5WV
+        lfyVlZW0l5eXN5mZmQCWlpYAbm5uAGZmZgBmZmYEZmZmTGZmZsVmZmb+ZmZm/2ZmZv9mZmb/lpaW/5aW
+        lv+Wlpb/l5eX/46Ojv9xcXH7XV1dn2hoaCB/f38AYmJiADQ0NABoaGgiZmZmkmZmZvBmZmb/ZmZm/2Zm
+        Zv9mZmb/ZmZm/5aWlv+Xl5f/lJSU/39/f/9hYWH/W1tb/2xsbP96enrSfHx8XF5eXhVLS0tbX19f0WZm
+        Zv9mZmb/ZmZm/2ZmZv9mZmb/ZmZm/2ZmZv+Wlpb/i4uL/21tbf9aWlr/ZGRk/3Z2dv98fHz/fHx8/3x8
+        fPVxcXHNUVFR9UxMTP9ZWVn/ZGRk/2ZmZv9mZmb/ZmZm/2ZmZv9mZmb/enp6919fX/9dXV3/b29v/3t7
+        e/98fHz/fHx8/3x8fP98fHz/fHx8/3V1df9eXl7/S0tL/1BQUP9fX1//ZmZm/2ZmZv9mZmb/ZmZm9ldX
+        V1ZjY2PFd3d3/nx8fP98fHz/fHx8/3x8fP98fHz/fHx8/3x8fP98fHz/e3t7/2xsbP9TU1P/S0tL/1dX
+        V/9jY2P+ZmZmxWZmZlZbW1sAf39/GH19fYJ8fHzqfHx8/3x8fP98fHz/fHx8/3x8fP98fHz/fHx8/3x8
+        fP99fX3/d3d3/2FhYf9MTEzrUlJShGZmZhlmZmYAW1tbAHt7ewB8fHwCe3t7QXx8fLx8fHz8fHx8/3x8
+        fP98fHz/fHx8/3x8fP98fHz/fHx8/3x8fP17e3u9ZmZmQhMTEwJnZ2cAZmZmAAAAAAAAAAAAfHx8AH19
+        fQB6enoTe3t7d3x8fON8fHz/fHx8/3x8fP98fHz/fHx8/3x8fOR7e3t4e3t7FFlZWQBEREQAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAB0dHQAenp6AP///wB7e3s1fHx8rHx8fPd8fHz/fHx8+Hx8fK17e3s2AAAAAHt7
+        ewB2dnYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB5eXkAe3t7AHp6eg57e3t2fHx82Xt7
+        e3d6enoPe3t7AHl5eQAAAAAAAAAAAAAAAAAAAAAAAAAAAP4P4AD8B+AA8AHgAMAAYACAACAAAAAAAAAA
+        AAAAAAAAAAAAAADgAAAB4AAAB4AAAA4AAAA8AAAA8AAAAOAAIACAAOAAAAHgAAAHgAAADgAAADwAAADw
+        AAAA4AAAAAAAAAAAAAAAAAAAAAAAAIAAIADAAGAA8AHgAPwH4AD+D+AA
+</value>
+  </data>
+  <data name="label2.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Name" xml:space="preserve">
+    <value>pictureBox1</value>
+  </data>
+  <data name="pictureBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;btnLogin.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <metadata name="$this.Language" type="System.Globalization.CultureInfo, System.Private.CoreLib, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
     <value>pt-BR</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
   </metadata>
 </root>

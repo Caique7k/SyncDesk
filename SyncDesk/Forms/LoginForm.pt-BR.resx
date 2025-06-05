@@ -527,6 +527,12 @@
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>116, 18</value>
   </data>
+  <data name="textBoxemail.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Bahnschrift, 9.75pt</value>
+  </data>
+  <data name="textBoxemail.Size" type="System.Drawing.Size, System.Drawing">
+    <value>216, 23</value>
+  </data>
   <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
     <value>Bahnschrift, 11.25pt</value>
   </data>
@@ -535,6 +541,12 @@
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>119, 18</value>
+  </data>
+  <data name="textBoxSenha.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Bahnschrift, 9.75pt</value>
+  </data>
+  <data name="textBoxSenha.Size" type="System.Drawing.Size, System.Drawing">
+    <value>216, 23</value>
   </data>
   <data name="btnLogin.Font" type="System.Drawing.Font, System.Drawing">
     <value>Bahnschrift, 11.25pt</value>

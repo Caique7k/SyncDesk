@@ -45,10 +45,13 @@ namespace SyncDesk.SyncDesk.Forms
             // 
             // dataGridView2
             // 
+            dataGridView2.AllowUserToAddRows = false;
+            dataGridView2.AllowUserToDeleteRows = false;
             dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView2.BackgroundColor = SystemColors.ButtonFace;
             dataGridView2.BorderStyle = BorderStyle.None;
             dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView2.Cursor = Cursors.Hand;
             dataGridView2.Dock = DockStyle.Fill;
             dataGridView2.Location = new Point(0, 64);
             dataGridView2.Margin = new Padding(3, 4, 3, 4);
