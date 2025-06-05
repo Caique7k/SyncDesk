@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormEditarCliente));
             label1 = new Label();
             textBoxNomeEditar = new TextBox();
             label2 = new Label();
@@ -166,8 +167,10 @@
             Controls.Add(textBoxNomeEditar);
             Controls.Add(label1);
             Font = new Font("Bahnschrift", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            FormBorderStyle = FormBorderStyle.FixedSingle;
+            FormBorderStyle = FormBorderStyle.FixedDialog;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(3, 4, 3, 4);
+            MaximizeBox = false;
             Name = "FormEditarCliente";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Editar cliente";

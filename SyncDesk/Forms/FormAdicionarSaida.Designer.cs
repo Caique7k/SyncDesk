@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAdicionarSaida));
             label1 = new Label();
             txtBoxValor = new TextBox();
             label2 = new Label();
@@ -145,7 +146,10 @@
             Controls.Add(txtBoxValor);
             Controls.Add(label1);
             Font = new Font("Bahnschrift", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(3, 4, 3, 4);
+            MaximizeBox = false;
             Name = "FormAdicionarSaida";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Adicionar Saida";

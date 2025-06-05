@@ -105,14 +105,14 @@ namespace SyncDesk.SyncDesk.Forms
                         cmd.ExecuteNonQuery();
                     }
 
-                    MessageBox.Show("Entrada atualizada com sucesso!");
+                    MessageBox.Show("Saída atualizada com sucesso!");
                     SaidaEditada?.Invoke();
                     this.Close();
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Erro ao atualizar entrada: {ex.Message}");
+                MessageBox.Show($"Erro ao atualizar saída: {ex.Message}");
             }
         }
     }

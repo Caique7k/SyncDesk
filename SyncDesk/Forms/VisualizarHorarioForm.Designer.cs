@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VisualizarHorarioForm));
             label1 = new Label();
             label2 = new Label();
             label6 = new Label();
@@ -122,7 +123,7 @@
             btnOk.Name = "btnOk";
             btnOk.Size = new Size(75, 32);
             btnOk.TabIndex = 16;
-            btnOk.Text = "OK";
+            btnOk.Text = "Sair";
             btnOk.UseVisualStyleBackColor = true;
             btnOk.Click += btnOk_Click;
             // 
@@ -168,12 +169,13 @@
             Controls.Add(label1);
             Font = new Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             FormBorderStyle = FormBorderStyle.FixedDialog;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(4);
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "VisualizarHorarioForm";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Visualização de horário";
+            Text = "Visualizar horário";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);

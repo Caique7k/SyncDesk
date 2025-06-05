@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdicionarHorarioForm));
             label1 = new Label();
             dateTimePicker1 = new DateTimePicker();
             label2 = new Label();
@@ -180,10 +181,12 @@
             Controls.Add(label1);
             Font = new Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             FormBorderStyle = FormBorderStyle.FixedDialog;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(4);
+            MaximizeBox = false;
             Name = "AdicionarHorarioForm";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "AdicionarClienteForm";
+            Text = "Adicionar Cliente";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);

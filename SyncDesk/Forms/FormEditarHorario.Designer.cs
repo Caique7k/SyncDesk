@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormEditarHorario));
             label1 = new Label();
             dateTimePickerEdit = new DateTimePicker();
             label2 = new Label();
@@ -141,6 +142,7 @@
             btnCancelar.TabIndex = 15;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = true;
+            btnCancelar.Click += btnCancelar_Click;
             // 
             // label4
             // 
@@ -179,11 +181,12 @@
             Controls.Add(label1);
             Font = new Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             FormBorderStyle = FormBorderStyle.FixedDialog;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(4);
             MaximizeBox = false;
             Name = "FormEditarHorario";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "FormEditarHorario";
+            Text = "Editar Horario";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);

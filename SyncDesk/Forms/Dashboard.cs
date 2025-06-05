@@ -25,6 +25,7 @@ namespace SyncDesk.SyncDesk.Forms
             CarregarProximosHorarios();
             CriarGraficoFinanceiro();
             timerStatusConexao.Start();
+            timerAtualizacaoHorarios.Start();
 
             ArredondarBordas(panelEntradaSaida, 15);
             ArredondarBordas(panelProximoHorario, 15);
@@ -101,14 +102,13 @@ namespace SyncDesk.SyncDesk.Forms
 
 
             string query = @"
-        SELECT h.id, h.data_hora, h.hora, h.descricao, c.nome AS cliente
-        FROM horarios h
-        JOIN clientes c ON h.cliente_id = c.id
-        WHERE h.data_hora >= NOW()
-        ORDER BY h.data_hora ASC
-        LIMIT 1
-        ;
-    ";
+                                SELECT h.id, h.data_hora, h.hora, h.descricao, c.nome AS cliente
+                                FROM horarios h
+                                JOIN clientes c ON h.cliente_id = c.id
+                                WHERE (h.data_hora + h.hora::time) >= CURRENT_TIMESTAMP
+                                ORDER BY h.data_hora + h.hora::time ASC
+                                LIMIT 1;
+                        ";
 
             using (var conn = Database.GetConnection())
             using (var cmd = new NpgsqlCommand(query, conn))
@@ -116,7 +116,7 @@ namespace SyncDesk.SyncDesk.Forms
             {
                 if (!reader.HasRows)
                 {
-                    lblProximosHorarios.Text = "Nenhuma tarefa pendente para os próximos dias.";
+                    lblProximosHorarios.Text = "Nenhuma tarefa \npendente para os \npróximos dias.";
                     return;
                 }
 
@@ -266,7 +266,12 @@ namespace SyncDesk.SyncDesk.Forms
             chart.Legends.Add(new Legend("Legenda"));
 
             panelGrafico.Controls.Clear();
-            panelGrafico.Controls.Add(chart); 
+            panelGrafico.Controls.Add(chart);
+        }
+
+        private void timerAtualizacaoHorarios_Tick(object sender, EventArgs e)
+        {
+            CarregarProximosHorarios();
         }
     }
 }

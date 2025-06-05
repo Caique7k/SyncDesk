@@ -54,6 +54,7 @@
             panel5 = new Panel();
             panel4 = new Panel();
             timerStatusConexao = new System.Windows.Forms.Timer(components);
+            timerAtualizacaoHorarios = new System.Windows.Forms.Timer(components);
             panelEntradaSaida.SuspendLayout();
             panelProximoHorario.SuspendLayout();
             panel3.SuspendLayout();
@@ -137,7 +138,7 @@
             panelProximoHorario.AutoSize = true;
             panelProximoHorario.BackColor = SystemColors.ControlLightLight;
             panelProximoHorario.Controls.Add(lblProximosHorarios);
-            panelProximoHorario.Location = new Point(298, 68);
+            panelProximoHorario.Location = new Point(266, 67);
             panelProximoHorario.Name = "panelProximoHorario";
             panelProximoHorario.Size = new Size(84, 78);
             panelProximoHorario.TabIndex = 6;
@@ -294,7 +295,7 @@
             // 
             panel4.Location = new Point(220, 67);
             panel4.Name = "panel4";
-            panel4.Size = new Size(72, 88);
+            panel4.Size = new Size(40, 88);
             panel4.TabIndex = 1;
             panel4.Visible = false;
             // 
@@ -303,6 +304,11 @@
             timerStatusConexao.Enabled = true;
             timerStatusConexao.Interval = 10000;
             timerStatusConexao.Tick += timerStatusConexao_Tick;
+            // 
+            // timerAtualizacaoHorarios
+            // 
+            timerAtualizacaoHorarios.Interval = 6000;
+            timerAtualizacaoHorarios.Tick += timerAtualizacaoHorarios_Tick;
             // 
             // Dashboard
             // 
@@ -354,5 +360,6 @@
         private Label lblStatusConexao;
         private Panel panelGrafico;
         private Panel panel1;
+        private System.Windows.Forms.Timer timerAtualizacaoHorarios;
     }
 }
