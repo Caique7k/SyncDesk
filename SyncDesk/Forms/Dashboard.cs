@@ -27,6 +27,8 @@ namespace SyncDesk.SyncDesk.Forms
             timerStatusConexao.Start();
             timerAtualizacaoHorarios.Start();
 
+           
+
             ArredondarBordas(panelEntradaSaida, 15);
             ArredondarBordas(panelProximoHorario, 15);
             ArredondarBordas(panelClienteSemana, 15);
@@ -273,5 +275,6 @@ namespace SyncDesk.SyncDesk.Forms
         {
             CarregarProximosHorarios();
         }
+        
     }
 }

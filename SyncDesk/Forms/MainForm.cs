@@ -19,6 +19,7 @@ using System.Windows.Forms.DataVisualization.Charting;
 using System.Globalization;
 using SyncDesk.Data;
 using iTextAlignment = iText.Layout.Properties.HorizontalAlignment;
+using static SyncDesk.SyncDesk.Forms.AdicionarHorarioForm;
 
 
 namespace SyncDesk.SyncDesk.Forms
@@ -28,6 +29,7 @@ namespace SyncDesk.SyncDesk.Forms
         public string usuarioNome;
         public string usuarioTipo;
         public string usuarioId;
+        private HashSet<DateTime> tarefasNotificadas = new HashSet<DateTime>(); // armazena a tarefa ja notificada
         public MainForm(string nome, string tipo, string usuarioId)
         {
             InitializeComponent();
@@ -37,6 +39,10 @@ namespace SyncDesk.SyncDesk.Forms
             this.usuarioId = usuarioId;
             timer1.Interval = 100;
             timer1.Start();
+            notifyIcon1.Visible = true;
+            timerNotificacao.Interval = 6000;
+            timerNotificacao.Tick += verificaNotificacao;
+            timerNotificacao.Start();
 
 
         }
@@ -349,6 +355,50 @@ namespace SyncDesk.SyncDesk.Forms
         private void timer1_Tick(object sender, EventArgs e)
         {
             mostraHora.Text = DateTime.Now.ToString("HH:mm:ss");
+        }
+
+        private void verificaNotificacao(object sender, EventArgs e)
+        {
+            using (var conn = Database.GetConnection())
+            {
+                string query = @"
+        SELECT h.data_hora, h.hora, h.descricao, c.nome AS cliente
+        FROM horarios h
+        JOIN clientes c ON h.cliente_id = c.id
+        WHERE (h.data_hora + h.hora::time) >= CURRENT_TIMESTAMP
+        ORDER BY h.data_hora + h.hora::time ASC
+        ";
+
+                using (var cmd = new NpgsqlCommand(query, conn))
+                using (var reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        string horaTexto = reader["hora"].ToString();
+                        string descricao = reader["descricao"].ToString();
+                        string cliente = reader["cliente"].ToString();
+                        DateTime dataTarefa = Convert.ToDateTime(reader["data_hora"]);
+
+                        if (TimeSpan.TryParse(horaTexto, out TimeSpan horaTarefa))
+                        {
+                            DateTime horarioCompleto = dataTarefa.Date + horaTarefa;
+                            TimeSpan diferenca = horarioCompleto - DateTime.Now;
+
+                            // Se entre 9 e 11 minutos e ainda não foi notificada
+                            if (diferenca.TotalMinutes > 9 && diferenca.TotalMinutes < 11 &&
+                                !tarefasNotificadas.Contains(horarioCompleto))
+                            {
+                                notifyIcon1.Visible = true;
+                                notifyIcon1.BalloonTipTitle = "Tarefa Próxima!";
+                                notifyIcon1.BalloonTipText = $"Cliente: {cliente}\nDescrição: {descricao}\nEm {horaTarefa:hh\\:mm}";
+                                notifyIcon1.ShowBalloonTip(5000);
+
+                                tarefasNotificadas.Add(horarioCompleto); // marca a tarefa como ja notificada
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             panelEntradaSaida = new Panel();
             lblSaldoAtual = new Label();
             label3 = new Label();
@@ -55,6 +56,8 @@
             panel4 = new Panel();
             timerStatusConexao = new System.Windows.Forms.Timer(components);
             timerAtualizacaoHorarios = new System.Windows.Forms.Timer(components);
+            timerNotificacao = new System.Windows.Forms.Timer(components);
+            notifyIcon1 = new NotifyIcon(components);
             panelEntradaSaida.SuspendLayout();
             panelProximoHorario.SuspendLayout();
             panel3.SuspendLayout();
@@ -310,6 +313,16 @@
             timerAtualizacaoHorarios.Interval = 6000;
             timerAtualizacaoHorarios.Tick += timerAtualizacaoHorarios_Tick;
             // 
+            // timerNotificacao
+            // 
+            timerNotificacao.Interval = 6000;
+            // 
+            // notifyIcon1
+            // 
+            notifyIcon1.Icon = (Icon)resources.GetObject("notifyIcon1.Icon");
+            notifyIcon1.Text = "notifyIcon1";
+            notifyIcon1.Visible = true;
+            // 
             // Dashboard
             // 
             AutoScaleDimensions = new SizeF(8F, 18F);
@@ -361,5 +374,7 @@
         private Panel panelGrafico;
         private Panel panel1;
         private System.Windows.Forms.Timer timerAtualizacaoHorarios;
+        private System.Windows.Forms.Timer timerNotificacao;
+        private NotifyIcon notifyIcon1;
     }
 }

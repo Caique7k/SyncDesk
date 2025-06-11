@@ -61,6 +61,8 @@
             btnGerarPdf = new Button();
             saveFileDialog1 = new SaveFileDialog();
             timer1 = new System.Windows.Forms.Timer(components);
+            notifyIcon1 = new NotifyIcon(components);
+            timerNotificacao = new System.Windows.Forms.Timer(components);
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureUsuario).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureSaida).BeginInit();
@@ -417,6 +419,16 @@
             // 
             timer1.Tick += timer1_Tick;
             // 
+            // notifyIcon1
+            // 
+            notifyIcon1.Icon = (Icon)resources.GetObject("notifyIcon1.Icon");
+            notifyIcon1.Text = "notifyIcon1";
+            notifyIcon1.Visible = true;
+            // 
+            // timerNotificacao
+            // 
+            timerNotificacao.Interval = 6000;
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 16F);
@@ -490,5 +502,7 @@
         private System.Windows.Forms.Timer timer1;
         private Panel panel6;
         private Panel panel5;
+        private NotifyIcon notifyIcon1;
+        private System.Windows.Forms.Timer timerNotificacao;
     }
 }
