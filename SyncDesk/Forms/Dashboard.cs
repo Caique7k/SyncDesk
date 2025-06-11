@@ -27,6 +27,7 @@ namespace SyncDesk.SyncDesk.Forms
             timerStatusConexao.Start();
             timerAtualizacaoHorarios.Start();
 
+            lblProximosHorarios.Size = panelProximoHorario.Size;
            
 
             ArredondarBordas(panelEntradaSaida, 15);

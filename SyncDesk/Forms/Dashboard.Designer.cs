@@ -143,16 +143,15 @@
             panelProximoHorario.Controls.Add(lblProximosHorarios);
             panelProximoHorario.Location = new Point(266, 67);
             panelProximoHorario.Name = "panelProximoHorario";
-            panelProximoHorario.Size = new Size(84, 78);
+            panelProximoHorario.Size = new Size(161, 88);
             panelProximoHorario.TabIndex = 6;
             // 
             // lblProximosHorarios
             // 
-            lblProximosHorarios.AutoSize = true;
             lblProximosHorarios.Dock = DockStyle.Fill;
             lblProximosHorarios.Location = new Point(0, 0);
             lblProximosHorarios.Name = "lblProximosHorarios";
-            lblProximosHorarios.Size = new Size(49, 18);
+            lblProximosHorarios.Size = new Size(161, 88);
             lblProximosHorarios.TabIndex = 0;
             lblProximosHorarios.Text = "label4";
             lblProximosHorarios.TextAlign = ContentAlignment.MiddleCenter;
@@ -288,9 +287,9 @@
             // 
             // panel5
             // 
-            panel5.Location = new Point(388, 67);
+            panel5.Location = new Point(433, 67);
             panel5.Name = "panel5";
-            panel5.Size = new Size(72, 88);
+            panel5.Size = new Size(27, 88);
             panel5.TabIndex = 2;
             panel5.Visible = false;
             // 
@@ -335,7 +334,6 @@
             panelEntradaSaida.ResumeLayout(false);
             panelEntradaSaida.PerformLayout();
             panelProximoHorario.ResumeLayout(false);
-            panelProximoHorario.PerformLayout();
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
             PanelConexao.ResumeLayout(false);
