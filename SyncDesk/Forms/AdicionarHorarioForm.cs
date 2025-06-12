@@ -76,7 +76,6 @@ namespace SyncDesk.SyncDesk.Forms
                         comboBoxCliente.DataSource = clientes; // adiciona os clientes na listagem do combobox
                         comboBoxCliente.DisplayMember = "Nome";
                         comboBoxCliente.ValueMember = "Id";
-                        comboBoxCliente.SelectedIndex = 0;
                         comboBoxCliente.Refresh();
 
                     }
