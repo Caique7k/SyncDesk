@@ -73,7 +73,7 @@ namespace SyncDesk.SyncDesk.Forms
                             cmd.ExecuteNonQuery();
                             this.DialogResult = DialogResult.OK;
                             UsuarioAdicionado?.Invoke();
-                            MessageBox.Show("Cliente adicionado com sucesso!");
+                            MessageBox.Show("Usuário adicionado com sucesso!");
                             this.Close();
 
                         }
