@@ -236,6 +236,10 @@ namespace SyncDesk.SyncDesk.Forms
                 BorderWidth = 2
             };
 
+            // Dicionários para armazenar os valores por data
+            Dictionary<string, decimal> entradas = new();
+            Dictionary<string, decimal> saidas = new();
+
             string query = @"
         SELECT 
             DATE(data_registro) AS dia,
@@ -254,14 +258,27 @@ namespace SyncDesk.SyncDesk.Forms
                 while (reader.Read())
                 {
                     DateTime dia = Convert.ToDateTime(reader["dia"]);
+                    string diaStr = dia.ToString("dd/MM");
+
                     decimal entrada = Convert.ToDecimal(reader["total_entrada"]);
                     decimal saida = Convert.ToDecimal(reader["total_saida"]);
 
-                    string diaStr = dia.ToString("dd/MM");
-
-                    serieEntradas.Points.AddXY(diaStr, entrada);
-                    serieSaidas.Points.AddXY(diaStr, saida);
+                    entradas[diaStr] = entrada;
+                    saidas[diaStr] = saida;
                 }
+            }
+
+            
+            for (int i = 6; i >= 0; i--)
+            {
+                DateTime dia = DateTime.Today.AddDays(-i);
+                string diaStr = dia.ToString("dd/MM");
+
+                decimal entrada = entradas.ContainsKey(diaStr) ? entradas[diaStr] : 0;
+                decimal saida = saidas.ContainsKey(diaStr) ? saidas[diaStr] : 0;
+
+                serieEntradas.Points.AddXY(diaStr, entrada);
+                serieSaidas.Points.AddXY(diaStr, saida);
             }
 
             chart.Series.Add(serieEntradas);
@@ -271,7 +288,6 @@ namespace SyncDesk.SyncDesk.Forms
             panelGrafico.Controls.Clear();
             panelGrafico.Controls.Add(chart);
         }
-
         private void timerAtualizacaoHorarios_Tick(object sender, EventArgs e)
         {
             CarregarProximosHorarios();
